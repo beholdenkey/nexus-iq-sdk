@@ -29,29 +29,21 @@ class TestCycloneDxApi(unittest.TestCase):
         pass
 
     def test_get_by_report_id(self):
-        """Test case for get_by_report_id
-
-        """
+        """Test case for get_by_report_id"""
         pass
 
     def test_get_by_report_id1(self):
-        """Test case for get_by_report_id1
-
-        """
+        """Test case for get_by_report_id1"""
         pass
 
     def test_get_latest(self):
-        """Test case for get_latest
-
-        """
+        """Test case for get_latest"""
         pass
 
     def test_get_latest1(self):
-        """Test case for get_latest1
-
-        """
+        """Test case for get_latest1"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

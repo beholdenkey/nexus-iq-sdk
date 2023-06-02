@@ -1,20 +1,20 @@
 # swagger_client.ConfigMailApi
 
-All URIs are relative to */*
+All URIs are relative to _/_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**delete_configuration2**](ConfigMailApi.md#delete_configuration2) | **DELETE** /api/v2/config/mail | 
-[**get_configuration2**](ConfigMailApi.md#get_configuration2) | **GET** /api/v2/config/mail | 
-[**set_configuration2**](ConfigMailApi.md#set_configuration2) | **PUT** /api/v2/config/mail | 
-[**test_configuration**](ConfigMailApi.md#test_configuration) | **POST** /api/v2/config/mail/test/{recipientEmail} | 
+| Method                                                              | HTTP request                                       | Description |
+| ------------------------------------------------------------------- | -------------------------------------------------- | ----------- |
+| [**delete_configuration2**](ConfigMailApi.md#delete_configuration2) | **DELETE** /api/v2/config/mail                     |
+| [**get_configuration2**](ConfigMailApi.md#get_configuration2)       | **GET** /api/v2/config/mail                        |
+| [**set_configuration2**](ConfigMailApi.md#set_configuration2)       | **PUT** /api/v2/config/mail                        |
+| [**test_configuration**](ConfigMailApi.md#test_configuration)       | **POST** /api/v2/config/mail/test/{recipientEmail} |
 
 # **delete_configuration2**
+
 > delete_configuration2()
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -32,6 +32,7 @@ except ApiException as e:
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -44,17 +45,17 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: _/_
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_configuration2**
+
 > ApiMailConfigurationDTO get_configuration2()
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -73,6 +74,7 @@ except ApiException as e:
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -85,17 +87,17 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **set_configuration2**
+
 > set_configuration2(body=body)
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -115,9 +117,9 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**ApiMailConfigurationDTO**](ApiMailConfigurationDTO.md)|  | [optional] 
+| Name     | Type                                                      | Description | Notes      |
+| -------- | --------------------------------------------------------- | ----------- | ---------- |
+| **body** | [**ApiMailConfigurationDTO**](ApiMailConfigurationDTO.md) |             | [optional] |
 
 ### Return type
 
@@ -129,17 +131,17 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: */*
+- **Content-Type**: application/json
+- **Accept**: _/_
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **test_configuration**
+
 > test_configuration(recipient_email, body=body)
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -149,7 +151,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.ConfigMailApi()
-recipient_email = 'recipient_email_example' # str | 
+recipient_email = 'recipient_email_example' # str |
 body = swagger_client.ApiMailConfigurationDTO() # ApiMailConfigurationDTO |  (optional)
 
 try:
@@ -160,10 +162,10 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **recipient_email** | **str**|  | 
- **body** | [**ApiMailConfigurationDTO**](ApiMailConfigurationDTO.md)|  | [optional] 
+| Name                | Type                                                      | Description | Notes      |
+| ------------------- | --------------------------------------------------------- | ----------- | ---------- |
+| **recipient_email** | **str**                                                   |             |
+| **body**            | [**ApiMailConfigurationDTO**](ApiMailConfigurationDTO.md) |             | [optional] |
 
 ### Return type
 
@@ -175,8 +177,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: */*
+- **Content-Type**: application/json
+- **Accept**: _/_
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

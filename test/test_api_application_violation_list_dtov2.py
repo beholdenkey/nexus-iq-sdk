@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import nexus_iq_sdk
-from nexus_iq_sdk.models.api_application_violation_list_dtov2 import ApiApplicationViolationListDTOV2  # noqa: E501
+from nexus_iq_sdk.models.api_application_violation_list_dtov2 import (  # noqa: E501
+    ApiApplicationViolationListDTOV2,
+)
 from nexus_iq_sdk.rest import ApiException
 
 
@@ -35,5 +37,5 @@ class TestApiApplicationViolationListDTOV2(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

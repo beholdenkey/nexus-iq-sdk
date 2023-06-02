@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import nexus_iq_sdk
-from nexus_iq_sdk.api.config_reverse_proxy_authentication_api import ConfigReverseProxyAuthenticationApi  # noqa: E501
+from nexus_iq_sdk.api.config_reverse_proxy_authentication_api import (  # noqa: E501
+    ConfigReverseProxyAuthenticationApi,
+)
 from nexus_iq_sdk.rest import ApiException
 
 
@@ -29,23 +31,17 @@ class TestConfigReverseProxyAuthenticationApi(unittest.TestCase):
         pass
 
     def test_delete_configuration4(self):
-        """Test case for delete_configuration4
-
-        """
+        """Test case for delete_configuration4"""
         pass
 
     def test_get_configuration4(self):
-        """Test case for get_configuration4
-
-        """
+        """Test case for get_configuration4"""
         pass
 
     def test_set_configuration4(self):
-        """Test case for set_configuration4
-
-        """
+        """Test case for set_configuration4"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

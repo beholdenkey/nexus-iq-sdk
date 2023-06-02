@@ -1,17 +1,17 @@
 # swagger_client.EndpointsApi
 
-All URIs are relative to */*
+All URIs are relative to _/_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**get_open_api**](EndpointsApi.md#get_open_api) | **GET** /api/v2/endpoints/{apiType} | 
+| Method                                           | HTTP request                        | Description |
+| ------------------------------------------------ | ----------------------------------- | ----------- |
+| [**get_open_api**](EndpointsApi.md#get_open_api) | **GET** /api/v2/endpoints/{apiType} |
 
 # **get_open_api**
+
 > str get_open_api(api_type)
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -21,7 +21,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.EndpointsApi()
-api_type = 'api_type_example' # str | 
+api_type = 'api_type_example' # str |
 
 try:
     api_response = api_instance.get_open_api(api_type)
@@ -32,9 +32,9 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **api_type** | **str**|  | 
+| Name         | Type    | Description | Notes |
+| ------------ | ------- | ----------- | ----- |
+| **api_type** | **str** |             |
 
 ### Return type
 
@@ -46,8 +46,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import nexus_iq_sdk
-from nexus_iq_sdk.models.api_firewall_release_quarantine_summary_dto import ApiFirewallReleaseQuarantineSummaryDTO  # noqa: E501
+from nexus_iq_sdk.models.api_firewall_release_quarantine_summary_dto import (  # noqa: E501
+    ApiFirewallReleaseQuarantineSummaryDTO,
+)
 from nexus_iq_sdk.rest import ApiException
 
 
@@ -35,5 +37,5 @@ class TestApiFirewallReleaseQuarantineSummaryDTO(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

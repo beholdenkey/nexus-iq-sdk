@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import nexus_iq_sdk
-from nexus_iq_sdk.api.source_control_metrics_api import SourceControlMetricsApi  # noqa: E501
+from nexus_iq_sdk.api.source_control_metrics_api import (  # noqa: E501
+    SourceControlMetricsApi,
+)
 from nexus_iq_sdk.rest import ApiException
 
 
@@ -29,11 +31,9 @@ class TestSourceControlMetricsApi(unittest.TestCase):
         pass
 
     def test_get_source_control(self):
-        """Test case for get_source_control
-
-        """
+        """Test case for get_source_control"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

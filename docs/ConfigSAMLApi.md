@@ -1,19 +1,19 @@
 # swagger_client.ConfigSAMLApi
 
-All URIs are relative to */*
+All URIs are relative to _/_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**delete_saml_configuration**](ConfigSAMLApi.md#delete_saml_configuration) | **DELETE** /api/v2/config/saml | 
-[**get_metadata**](ConfigSAMLApi.md#get_metadata) | **GET** /api/v2/config/saml/metadata | 
-[**get_saml_configuration**](ConfigSAMLApi.md#get_saml_configuration) | **GET** /api/v2/config/saml | 
+| Method                                                                      | HTTP request                         | Description |
+| --------------------------------------------------------------------------- | ------------------------------------ | ----------- |
+| [**delete_saml_configuration**](ConfigSAMLApi.md#delete_saml_configuration) | **DELETE** /api/v2/config/saml       |
+| [**get_metadata**](ConfigSAMLApi.md#get_metadata)                           | **GET** /api/v2/config/saml/metadata |
+| [**get_saml_configuration**](ConfigSAMLApi.md#get_saml_configuration)       | **GET** /api/v2/config/saml          |
 
 # **delete_saml_configuration**
+
 > delete_saml_configuration()
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -31,6 +31,7 @@ except ApiException as e:
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -43,17 +44,17 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: _/_
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_metadata**
+
 > str get_metadata()
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -72,6 +73,7 @@ except ApiException as e:
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -84,17 +86,17 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/xml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_saml_configuration**
+
 > ApiSamlConfigurationResponseDTO get_saml_configuration()
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -113,6 +115,7 @@ except ApiException as e:
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -125,8 +128,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

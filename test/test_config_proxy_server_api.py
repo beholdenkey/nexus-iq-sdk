@@ -29,23 +29,17 @@ class TestConfigProxyServerApi(unittest.TestCase):
         pass
 
     def test_delete_configuration3(self):
-        """Test case for delete_configuration3
-
-        """
+        """Test case for delete_configuration3"""
         pass
 
     def test_get_configuration3(self):
-        """Test case for get_configuration3
-
-        """
+        """Test case for get_configuration3"""
         pass
 
     def test_set_configuration3(self):
-        """Test case for set_configuration3
-
-        """
+        """Test case for set_configuration3"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -1,21 +1,21 @@
 # swagger_client.SourceControlApi
 
-All URIs are relative to */*
+All URIs are relative to _/_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**add_or_update_source_control**](SourceControlApi.md#add_or_update_source_control) | **POST** /api/v2/sourceControl | 
-[**add_source_control**](SourceControlApi.md#add_source_control) | **POST** /api/v2/sourceControl/{ownerType}/{internalOwnerId} | 
-[**delete_source_control**](SourceControlApi.md#delete_source_control) | **DELETE** /api/v2/sourceControl/{ownerType}/{internalOwnerId} | 
-[**get_source_control1**](SourceControlApi.md#get_source_control1) | **GET** /api/v2/sourceControl/{ownerType}/{internalOwnerId} | 
-[**update_source_control**](SourceControlApi.md#update_source_control) | **PUT** /api/v2/sourceControl/{ownerType}/{internalOwnerId} | 
+| Method                                                                               | HTTP request                                                   | Description |
+| ------------------------------------------------------------------------------------ | -------------------------------------------------------------- | ----------- |
+| [**add_or_update_source_control**](SourceControlApi.md#add_or_update_source_control) | **POST** /api/v2/sourceControl                                 |
+| [**add_source_control**](SourceControlApi.md#add_source_control)                     | **POST** /api/v2/sourceControl/{ownerType}/{internalOwnerId}   |
+| [**delete_source_control**](SourceControlApi.md#delete_source_control)               | **DELETE** /api/v2/sourceControl/{ownerType}/{internalOwnerId} |
+| [**get_source_control1**](SourceControlApi.md#get_source_control1)                   | **GET** /api/v2/sourceControl/{ownerType}/{internalOwnerId}    |
+| [**update_source_control**](SourceControlApi.md#update_source_control)               | **PUT** /api/v2/sourceControl/{ownerType}/{internalOwnerId}    |
 
 # **add_or_update_source_control**
+
 > ApiSourceControlDTO add_or_update_source_control(public_id=public_id, repository_url=repository_url)
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -37,10 +37,10 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **public_id** | **str**|  | [optional] 
- **repository_url** | **str**|  | [optional] 
+| Name               | Type    | Description | Notes      |
+| ------------------ | ------- | ----------- | ---------- |
+| **public_id**      | **str** |             | [optional] |
+| **repository_url** | **str** |             | [optional] |
 
 ### Return type
 
@@ -52,17 +52,17 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_source_control**
+
 > ApiSourceControlDTO add_source_control(owner_type, internal_owner_id, body=body)
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -72,8 +72,8 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.SourceControlApi()
-owner_type = 'owner_type_example' # str | 
-internal_owner_id = 'internal_owner_id_example' # str | 
+owner_type = 'owner_type_example' # str |
+internal_owner_id = 'internal_owner_id_example' # str |
 body = swagger_client.ApiSourceControlDTO() # ApiSourceControlDTO |  (optional)
 
 try:
@@ -85,11 +85,11 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **owner_type** | **str**|  | 
- **internal_owner_id** | **str**|  | 
- **body** | [**ApiSourceControlDTO**](ApiSourceControlDTO.md)|  | [optional] 
+| Name                  | Type                                              | Description | Notes      |
+| --------------------- | ------------------------------------------------- | ----------- | ---------- |
+| **owner_type**        | **str**                                           |             |
+| **internal_owner_id** | **str**                                           |             |
+| **body**              | [**ApiSourceControlDTO**](ApiSourceControlDTO.md) |             | [optional] |
 
 ### Return type
 
@@ -101,17 +101,17 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_source_control**
+
 > delete_source_control(owner_type, internal_owner_id)
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -121,8 +121,8 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.SourceControlApi()
-owner_type = 'owner_type_example' # str | 
-internal_owner_id = 'internal_owner_id_example' # str | 
+owner_type = 'owner_type_example' # str |
+internal_owner_id = 'internal_owner_id_example' # str |
 
 try:
     api_instance.delete_source_control(owner_type, internal_owner_id)
@@ -132,10 +132,10 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **owner_type** | **str**|  | 
- **internal_owner_id** | **str**|  | 
+| Name                  | Type    | Description | Notes |
+| --------------------- | ------- | ----------- | ----- |
+| **owner_type**        | **str** |             |
+| **internal_owner_id** | **str** |             |
 
 ### Return type
 
@@ -147,17 +147,17 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: _/_
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_source_control1**
+
 > ApiSourceControlDTO get_source_control1(owner_type, internal_owner_id)
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -167,8 +167,8 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.SourceControlApi()
-owner_type = 'owner_type_example' # str | 
-internal_owner_id = 'internal_owner_id_example' # str | 
+owner_type = 'owner_type_example' # str |
+internal_owner_id = 'internal_owner_id_example' # str |
 
 try:
     api_response = api_instance.get_source_control1(owner_type, internal_owner_id)
@@ -179,10 +179,10 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **owner_type** | **str**|  | 
- **internal_owner_id** | **str**|  | 
+| Name                  | Type    | Description | Notes |
+| --------------------- | ------- | ----------- | ----- |
+| **owner_type**        | **str** |             |
+| **internal_owner_id** | **str** |             |
 
 ### Return type
 
@@ -194,17 +194,17 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_source_control**
+
 > ApiSourceControlDTO update_source_control(owner_type, internal_owner_id, body=body)
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -214,8 +214,8 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.SourceControlApi()
-owner_type = 'owner_type_example' # str | 
-internal_owner_id = 'internal_owner_id_example' # str | 
+owner_type = 'owner_type_example' # str |
+internal_owner_id = 'internal_owner_id_example' # str |
 body = swagger_client.ApiSourceControlDTO() # ApiSourceControlDTO |  (optional)
 
 try:
@@ -227,11 +227,11 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **owner_type** | **str**|  | 
- **internal_owner_id** | **str**|  | 
- **body** | [**ApiSourceControlDTO**](ApiSourceControlDTO.md)|  | [optional] 
+| Name                  | Type                                              | Description | Notes      |
+| --------------------- | ------------------------------------------------- | ----------- | ---------- |
+| **owner_type**        | **str**                                           |             |
+| **internal_owner_id** | **str**                                           |             |
+| **body**              | [**ApiSourceControlDTO**](ApiSourceControlDTO.md) |             | [optional] |
 
 ### Return type
 
@@ -243,8 +243,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

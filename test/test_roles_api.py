@@ -29,11 +29,9 @@ class TestRolesApi(unittest.TestCase):
         pass
 
     def test_get_roles(self):
-        """Test case for get_roles
-
-        """
+        """Test case for get_roles"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

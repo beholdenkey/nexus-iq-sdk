@@ -29,83 +29,57 @@ class TestApplicationsApi(unittest.TestCase):
         pass
 
     def test_add_application(self):
-        """Test case for add_application
-
-        """
+        """Test case for add_application"""
         pass
 
     def test_clone_application(self):
-        """Test case for clone_application
-
-        """
+        """Test case for clone_application"""
         pass
 
     def test_delete_application(self):
-        """Test case for delete_application
-
-        """
+        """Test case for delete_application"""
         pass
 
     def test_get_application(self):
-        """Test case for get_application
-
-        """
+        """Test case for get_application"""
         pass
 
     def test_get_applications(self):
-        """Test case for get_applications
-
-        """
+        """Test case for get_applications"""
         pass
 
     def test_get_applications_by_organization_id(self):
-        """Test case for get_applications_by_organization_id
-
-        """
+        """Test case for get_applications_by_organization_id"""
         pass
 
     def test_get_data(self):
-        """Test case for get_data
-
-        """
+        """Test case for get_data"""
         pass
 
     def test_get_dependency_tree(self):
-        """Test case for get_dependency_tree
-
-        """
+        """Test case for get_dependency_tree"""
         pass
 
     def test_get_policy_violation_diff(self):
-        """Test case for get_policy_violation_diff
-
-        """
+        """Test case for get_policy_violation_diff"""
         pass
 
     def test_get_policy_violations1(self):
-        """Test case for get_policy_violations1
-
-        """
+        """Test case for get_policy_violations1"""
         pass
 
     def test_get_raw_data(self):
-        """Test case for get_raw_data
-
-        """
+        """Test case for get_raw_data"""
         pass
 
     def test_move_application(self):
-        """Test case for move_application
-
-        """
+        """Test case for move_application"""
         pass
 
     def test_update_application(self):
-        """Test case for update_application
-
-        """
+        """Test case for update_application"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

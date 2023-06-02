@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import nexus_iq_sdk
-from nexus_iq_sdk.models.api_data_retention_policies_dto import ApiDataRetentionPoliciesDTO  # noqa: E501
+from nexus_iq_sdk.models.api_data_retention_policies_dto import (  # noqa: E501
+    ApiDataRetentionPoliciesDTO,
+)
 from nexus_iq_sdk.rest import ApiException
 
 
@@ -35,5 +37,5 @@ class TestApiDataRetentionPoliciesDTO(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

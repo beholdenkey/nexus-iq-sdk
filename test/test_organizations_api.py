@@ -29,23 +29,17 @@ class TestOrganizationsApi(unittest.TestCase):
         pass
 
     def test_add_organization(self):
-        """Test case for add_organization
-
-        """
+        """Test case for add_organization"""
         pass
 
     def test_get_organization(self):
-        """Test case for get_organization
-
-        """
+        """Test case for get_organization"""
         pass
 
     def test_get_organizations(self):
-        """Test case for get_organizations
-
-        """
+        """Test case for get_organizations"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import nexus_iq_sdk
-from nexus_iq_sdk.models.configuration_validation_result import ConfigurationValidationResult  # noqa: E501
+from nexus_iq_sdk.models.configuration_validation_result import (  # noqa: E501
+    ConfigurationValidationResult,
+)
 from nexus_iq_sdk.rest import ApiException
 
 
@@ -35,5 +37,5 @@ class TestConfigurationValidationResult(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

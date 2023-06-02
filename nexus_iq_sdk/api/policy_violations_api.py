@@ -46,14 +46,20 @@ class PolicyViolationsApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_applicable_waivers_with_http_info(violation_id, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_applicable_waivers_with_http_info(
+                violation_id, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_applicable_waivers_with_http_info(violation_id, **kwargs)  # noqa: E501
+            (data) = self.get_applicable_waivers_with_http_info(
+                violation_id, **kwargs
+            )  # noqa: E501
             return data
 
-    def get_applicable_waivers_with_http_info(self, violation_id, **kwargs):  # noqa: E501
+    def get_applicable_waivers_with_http_info(
+        self, violation_id, **kwargs
+    ):  # noqa: E501
         """get_applicable_waivers  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -68,31 +74,32 @@ class PolicyViolationsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['violation_id']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["violation_id"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_applicable_waivers" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'violation_id' is set
-        if ('violation_id' not in params or
-                params['violation_id'] is None):
-            raise ValueError("Missing the required parameter `violation_id` when calling `get_applicable_waivers`")  # noqa: E501
+        if "violation_id" not in params or params["violation_id"] is None:
+            raise ValueError(
+                "Missing the required parameter `violation_id` when calling `get_applicable_waivers`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'violation_id' in params:
-            path_params['violationId'] = params['violation_id']  # noqa: E501
+        if "violation_id" in params:
+            path_params["violationId"] = params["violation_id"]  # noqa: E501
 
         query_params = []
 
@@ -103,29 +110,34 @@ class PolicyViolationsApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/v2/policyViolations/{violationId}/applicableWaivers', 'GET',
+            "/api/v2/policyViolations/{violationId}/applicableWaivers",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ApiPolicyWaiversApplicableToViolationDTO',  # noqa: E501
+            response_type="ApiPolicyWaiversApplicableToViolationDTO",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
-    def get_cross_stage_policy_violation_by_constituent_id(self, **kwargs):  # noqa: E501
+    def get_cross_stage_policy_violation_by_constituent_id(
+        self, **kwargs
+    ):  # noqa: E501
         """get_cross_stage_policy_violation_by_constituent_id  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -139,14 +151,24 @@ class PolicyViolationsApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_cross_stage_policy_violation_by_constituent_id_with_http_info(**kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return (
+                self.get_cross_stage_policy_violation_by_constituent_id_with_http_info(
+                    **kwargs
+                )
+            )  # noqa: E501
         else:
-            (data) = self.get_cross_stage_policy_violation_by_constituent_id_with_http_info(**kwargs)  # noqa: E501
+            (
+                data
+            ) = self.get_cross_stage_policy_violation_by_constituent_id_with_http_info(
+                **kwargs
+            )  # noqa: E501
             return data
 
-    def get_cross_stage_policy_violation_by_constituent_id_with_http_info(self, **kwargs):  # noqa: E501
+    def get_cross_stage_policy_violation_by_constituent_id_with_http_info(
+        self, **kwargs
+    ):  # noqa: E501
         """get_cross_stage_policy_violation_by_constituent_id  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -161,29 +183,32 @@ class PolicyViolationsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['constituent_id']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["constituent_id"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_cross_stage_policy_violation_by_constituent_id" % key
+                    " to method get_cross_stage_policy_violation_by_constituent_id"
+                    % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
         path_params = {}
 
         query_params = []
-        if 'constituent_id' in params:
-            query_params.append(('constituentId', params['constituent_id']))  # noqa: E501
+        if "constituent_id" in params:
+            query_params.append(
+                ("constituentId", params["constituent_id"])
+            )  # noqa: E501
 
         header_params = {}
 
@@ -192,29 +217,34 @@ class PolicyViolationsApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/v2/policyViolations/crossStage', 'GET',
+            "/api/v2/policyViolations/crossStage",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ApiCrossStageViolationDTOV2',  # noqa: E501
+            response_type="ApiCrossStageViolationDTOV2",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
-    def get_cross_stage_policy_violation_by_id(self, violation_id, **kwargs):  # noqa: E501
+    def get_cross_stage_policy_violation_by_id(
+        self, violation_id, **kwargs
+    ):  # noqa: E501
         """get_cross_stage_policy_violation_by_id  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -228,14 +258,20 @@ class PolicyViolationsApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_cross_stage_policy_violation_by_id_with_http_info(violation_id, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_cross_stage_policy_violation_by_id_with_http_info(
+                violation_id, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_cross_stage_policy_violation_by_id_with_http_info(violation_id, **kwargs)  # noqa: E501
+            (data) = self.get_cross_stage_policy_violation_by_id_with_http_info(
+                violation_id, **kwargs
+            )  # noqa: E501
             return data
 
-    def get_cross_stage_policy_violation_by_id_with_http_info(self, violation_id, **kwargs):  # noqa: E501
+    def get_cross_stage_policy_violation_by_id_with_http_info(
+        self, violation_id, **kwargs
+    ):  # noqa: E501
         """get_cross_stage_policy_violation_by_id  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -250,31 +286,32 @@ class PolicyViolationsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['violation_id']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["violation_id"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_cross_stage_policy_violation_by_id" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'violation_id' is set
-        if ('violation_id' not in params or
-                params['violation_id'] is None):
-            raise ValueError("Missing the required parameter `violation_id` when calling `get_cross_stage_policy_violation_by_id`")  # noqa: E501
+        if "violation_id" not in params or params["violation_id"] is None:
+            raise ValueError(
+                "Missing the required parameter `violation_id` when calling `get_cross_stage_policy_violation_by_id`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'violation_id' in params:
-            path_params['violationId'] = params['violation_id']  # noqa: E501
+        if "violation_id" in params:
+            path_params["violationId"] = params["violation_id"]  # noqa: E501
 
         query_params = []
 
@@ -285,27 +322,30 @@ class PolicyViolationsApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/v2/policyViolations/crossStage/{violationId}', 'GET',
+            "/api/v2/policyViolations/crossStage/{violationId}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ApiCrossStageViolationDTOV2',  # noqa: E501
+            response_type="ApiCrossStageViolationDTOV2",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_policy_violations(self, **kwargs):  # noqa: E501
         """get_policy_violations  # noqa: E501
@@ -321,8 +361,8 @@ class PolicyViolationsApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.get_policy_violations_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_policy_violations_with_http_info(**kwargs)  # noqa: E501
@@ -343,30 +383,30 @@ class PolicyViolationsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['p']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["p"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_policy_violations" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
         path_params = {}
 
         query_params = []
-        if 'p' in params:
-            query_params.append(('p', params['p']))  # noqa: E501
-            collection_formats['p'] = 'multi'  # noqa: E501
+        if "p" in params:
+            query_params.append(("p", params["p"]))  # noqa: E501
+            collection_formats["p"] = "multi"  # noqa: E501
 
         header_params = {}
 
@@ -375,29 +415,34 @@ class PolicyViolationsApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/v2/policyViolations', 'GET',
+            "/api/v2/policyViolations",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ApiApplicationViolationListDTOV2',  # noqa: E501
+            response_type="ApiApplicationViolationListDTOV2",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
-    def get_transitive_policy_violations_by_app_scan_component(self, owner_type, owner_id, scan_id, **kwargs):  # noqa: E501
+    def get_transitive_policy_violations_by_app_scan_component(
+        self, owner_type, owner_id, scan_id, **kwargs
+    ):  # noqa: E501
         """get_transitive_policy_violations_by_app_scan_component  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -416,14 +461,22 @@ class PolicyViolationsApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_transitive_policy_violations_by_app_scan_component_with_http_info(owner_type, owner_id, scan_id, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_transitive_policy_violations_by_app_scan_component_with_http_info(
+                owner_type, owner_id, scan_id, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_transitive_policy_violations_by_app_scan_component_with_http_info(owner_type, owner_id, scan_id, **kwargs)  # noqa: E501
+            (
+                data
+            ) = self.get_transitive_policy_violations_by_app_scan_component_with_http_info(
+                owner_type, owner_id, scan_id, **kwargs
+            )  # noqa: E501
             return data
 
-    def get_transitive_policy_violations_by_app_scan_component_with_http_info(self, owner_type, owner_id, scan_id, **kwargs):  # noqa: E501
+    def get_transitive_policy_violations_by_app_scan_component_with_http_info(
+        self, owner_type, owner_id, scan_id, **kwargs
+    ):  # noqa: E501
         """get_transitive_policy_violations_by_app_scan_component  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -443,51 +496,64 @@ class PolicyViolationsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['owner_type', 'owner_id', 'scan_id', 'component_identifier', 'package_url', 'hash']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = [
+            "owner_type",
+            "owner_id",
+            "scan_id",
+            "component_identifier",
+            "package_url",
+            "hash",
+        ]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_transitive_policy_violations_by_app_scan_component" % key
+                    " to method get_transitive_policy_violations_by_app_scan_component"
+                    % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'owner_type' is set
-        if ('owner_type' not in params or
-                params['owner_type'] is None):
-            raise ValueError("Missing the required parameter `owner_type` when calling `get_transitive_policy_violations_by_app_scan_component`")  # noqa: E501
+        if "owner_type" not in params or params["owner_type"] is None:
+            raise ValueError(
+                "Missing the required parameter `owner_type` when calling `get_transitive_policy_violations_by_app_scan_component`"
+            )  # noqa: E501
         # verify the required parameter 'owner_id' is set
-        if ('owner_id' not in params or
-                params['owner_id'] is None):
-            raise ValueError("Missing the required parameter `owner_id` when calling `get_transitive_policy_violations_by_app_scan_component`")  # noqa: E501
+        if "owner_id" not in params or params["owner_id"] is None:
+            raise ValueError(
+                "Missing the required parameter `owner_id` when calling `get_transitive_policy_violations_by_app_scan_component`"
+            )  # noqa: E501
         # verify the required parameter 'scan_id' is set
-        if ('scan_id' not in params or
-                params['scan_id'] is None):
-            raise ValueError("Missing the required parameter `scan_id` when calling `get_transitive_policy_violations_by_app_scan_component`")  # noqa: E501
+        if "scan_id" not in params or params["scan_id"] is None:
+            raise ValueError(
+                "Missing the required parameter `scan_id` when calling `get_transitive_policy_violations_by_app_scan_component`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'owner_type' in params:
-            path_params['ownerType'] = params['owner_type']  # noqa: E501
-        if 'owner_id' in params:
-            path_params['ownerId'] = params['owner_id']  # noqa: E501
-        if 'scan_id' in params:
-            path_params['scanId'] = params['scan_id']  # noqa: E501
+        if "owner_type" in params:
+            path_params["ownerType"] = params["owner_type"]  # noqa: E501
+        if "owner_id" in params:
+            path_params["ownerId"] = params["owner_id"]  # noqa: E501
+        if "scan_id" in params:
+            path_params["scanId"] = params["scan_id"]  # noqa: E501
 
         query_params = []
-        if 'component_identifier' in params:
-            query_params.append(('componentIdentifier', params['component_identifier']))  # noqa: E501
-        if 'package_url' in params:
-            query_params.append(('packageUrl', params['package_url']))  # noqa: E501
-        if 'hash' in params:
-            query_params.append(('hash', params['hash']))  # noqa: E501
+        if "component_identifier" in params:
+            query_params.append(
+                ("componentIdentifier", params["component_identifier"])
+            )  # noqa: E501
+        if "package_url" in params:
+            query_params.append(("packageUrl", params["package_url"]))  # noqa: E501
+        if "hash" in params:
+            query_params.append(("hash", params["hash"]))  # noqa: E501
 
         header_params = {}
 
@@ -496,29 +562,34 @@ class PolicyViolationsApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/v2/policyViolations/transitive/{ownerType}/{ownerId}/{scanId}', 'GET',
+            "/api/v2/policyViolations/transitive/{ownerType}/{ownerId}/{scanId}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ApiComponentTransitivePolicyViolationsDTO',  # noqa: E501
+            response_type="ApiComponentTransitivePolicyViolationsDTO",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
-    def get_transitive_policy_violations_by_owner_stage_component(self, owner_type, owner_id, stage_id, **kwargs):  # noqa: E501
+    def get_transitive_policy_violations_by_owner_stage_component(
+        self, owner_type, owner_id, stage_id, **kwargs
+    ):  # noqa: E501
         """get_transitive_policy_violations_by_owner_stage_component  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -537,14 +608,22 @@ class PolicyViolationsApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_transitive_policy_violations_by_owner_stage_component_with_http_info(owner_type, owner_id, stage_id, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_transitive_policy_violations_by_owner_stage_component_with_http_info(
+                owner_type, owner_id, stage_id, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_transitive_policy_violations_by_owner_stage_component_with_http_info(owner_type, owner_id, stage_id, **kwargs)  # noqa: E501
+            (
+                data
+            ) = self.get_transitive_policy_violations_by_owner_stage_component_with_http_info(
+                owner_type, owner_id, stage_id, **kwargs
+            )  # noqa: E501
             return data
 
-    def get_transitive_policy_violations_by_owner_stage_component_with_http_info(self, owner_type, owner_id, stage_id, **kwargs):  # noqa: E501
+    def get_transitive_policy_violations_by_owner_stage_component_with_http_info(
+        self, owner_type, owner_id, stage_id, **kwargs
+    ):  # noqa: E501
         """get_transitive_policy_violations_by_owner_stage_component  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -564,51 +643,64 @@ class PolicyViolationsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['owner_type', 'owner_id', 'stage_id', 'component_identifier', 'package_url', 'hash']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = [
+            "owner_type",
+            "owner_id",
+            "stage_id",
+            "component_identifier",
+            "package_url",
+            "hash",
+        ]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_transitive_policy_violations_by_owner_stage_component" % key
+                    " to method get_transitive_policy_violations_by_owner_stage_component"
+                    % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'owner_type' is set
-        if ('owner_type' not in params or
-                params['owner_type'] is None):
-            raise ValueError("Missing the required parameter `owner_type` when calling `get_transitive_policy_violations_by_owner_stage_component`")  # noqa: E501
+        if "owner_type" not in params or params["owner_type"] is None:
+            raise ValueError(
+                "Missing the required parameter `owner_type` when calling `get_transitive_policy_violations_by_owner_stage_component`"
+            )  # noqa: E501
         # verify the required parameter 'owner_id' is set
-        if ('owner_id' not in params or
-                params['owner_id'] is None):
-            raise ValueError("Missing the required parameter `owner_id` when calling `get_transitive_policy_violations_by_owner_stage_component`")  # noqa: E501
+        if "owner_id" not in params or params["owner_id"] is None:
+            raise ValueError(
+                "Missing the required parameter `owner_id` when calling `get_transitive_policy_violations_by_owner_stage_component`"
+            )  # noqa: E501
         # verify the required parameter 'stage_id' is set
-        if ('stage_id' not in params or
-                params['stage_id'] is None):
-            raise ValueError("Missing the required parameter `stage_id` when calling `get_transitive_policy_violations_by_owner_stage_component`")  # noqa: E501
+        if "stage_id" not in params or params["stage_id"] is None:
+            raise ValueError(
+                "Missing the required parameter `stage_id` when calling `get_transitive_policy_violations_by_owner_stage_component`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'owner_type' in params:
-            path_params['ownerType'] = params['owner_type']  # noqa: E501
-        if 'owner_id' in params:
-            path_params['ownerId'] = params['owner_id']  # noqa: E501
-        if 'stage_id' in params:
-            path_params['stageId'] = params['stage_id']  # noqa: E501
+        if "owner_type" in params:
+            path_params["ownerType"] = params["owner_type"]  # noqa: E501
+        if "owner_id" in params:
+            path_params["ownerId"] = params["owner_id"]  # noqa: E501
+        if "stage_id" in params:
+            path_params["stageId"] = params["stage_id"]  # noqa: E501
 
         query_params = []
-        if 'component_identifier' in params:
-            query_params.append(('componentIdentifier', params['component_identifier']))  # noqa: E501
-        if 'package_url' in params:
-            query_params.append(('packageUrl', params['package_url']))  # noqa: E501
-        if 'hash' in params:
-            query_params.append(('hash', params['hash']))  # noqa: E501
+        if "component_identifier" in params:
+            query_params.append(
+                ("componentIdentifier", params["component_identifier"])
+            )  # noqa: E501
+        if "package_url" in params:
+            query_params.append(("packageUrl", params["package_url"]))  # noqa: E501
+        if "hash" in params:
+            query_params.append(("hash", params["hash"]))  # noqa: E501
 
         header_params = {}
 
@@ -617,24 +709,27 @@ class PolicyViolationsApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/v2/policyViolations/transitive/{ownerType}/{ownerId}/stages/{stageId}', 'GET',
+            "/api/v2/policyViolations/transitive/{ownerType}/{ownerId}/stages/{stageId}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ApiComponentTransitivePolicyViolationsDTO',  # noqa: E501
+            response_type="ApiComponentTransitivePolicyViolationsDTO",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )

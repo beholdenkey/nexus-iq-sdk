@@ -48,14 +48,20 @@ class SecurityOverridesApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_security_vulnerability_overrides_with_http_info(**kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_security_vulnerability_overrides_with_http_info(
+                **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_security_vulnerability_overrides_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.get_security_vulnerability_overrides_with_http_info(
+                **kwargs
+            )  # noqa: E501
             return data
 
-    def get_security_vulnerability_overrides_with_http_info(self, **kwargs):  # noqa: E501
+    def get_security_vulnerability_overrides_with_http_info(
+        self, **kwargs
+    ):  # noqa: E501
         """get_security_vulnerability_overrides  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -72,33 +78,35 @@ class SecurityOverridesApi(object):
                  returns the request thread.
         """
 
-        all_params = ['ref_id', 'component_purl', 'owner_id']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["ref_id", "component_purl", "owner_id"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_security_vulnerability_overrides" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
         path_params = {}
 
         query_params = []
-        if 'ref_id' in params:
-            query_params.append(('refId', params['ref_id']))  # noqa: E501
-        if 'component_purl' in params:
-            query_params.append(('componentPurl', params['component_purl']))  # noqa: E501
-        if 'owner_id' in params:
-            query_params.append(('ownerId', params['owner_id']))  # noqa: E501
+        if "ref_id" in params:
+            query_params.append(("refId", params["ref_id"]))  # noqa: E501
+        if "component_purl" in params:
+            query_params.append(
+                ("componentPurl", params["component_purl"])
+            )  # noqa: E501
+        if "owner_id" in params:
+            query_params.append(("ownerId", params["owner_id"]))  # noqa: E501
 
         header_params = {}
 
@@ -107,24 +115,27 @@ class SecurityOverridesApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/v2/securityOverrides', 'GET',
+            "/api/v2/securityOverrides",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ApiSecurityVulnerabilityOverrideResponseDTOV2',  # noqa: E501
+            response_type="ApiSecurityVulnerabilityOverrideResponseDTOV2",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )

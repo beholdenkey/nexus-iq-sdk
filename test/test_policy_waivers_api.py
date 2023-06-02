@@ -29,47 +29,33 @@ class TestPolicyWaiversApi(unittest.TestCase):
         pass
 
     def test_add_policy_waiver_by_policy_violation_id(self):
-        """Test case for add_policy_waiver_by_policy_violation_id
-
-        """
+        """Test case for add_policy_waiver_by_policy_violation_id"""
         pass
 
     def test_add_waiver_to_transitive_policy_violations_by_app_scan_component(self):
-        """Test case for add_waiver_to_transitive_policy_violations_by_app_scan_component
-
-        """
+        """Test case for add_waiver_to_transitive_policy_violations_by_app_scan_component"""
         pass
 
     def test_add_waiver_to_transitive_policy_violations_by_owner_stage_component(self):
-        """Test case for add_waiver_to_transitive_policy_violations_by_owner_stage_component
-
-        """
+        """Test case for add_waiver_to_transitive_policy_violations_by_owner_stage_component"""
         pass
 
     def test_delete_policy_waiver(self):
-        """Test case for delete_policy_waiver
-
-        """
+        """Test case for delete_policy_waiver"""
         pass
 
     def test_get_policy_waiver(self):
-        """Test case for get_policy_waiver
-
-        """
+        """Test case for get_policy_waiver"""
         pass
 
     def test_get_policy_waivers(self):
-        """Test case for get_policy_waivers
-
-        """
+        """Test case for get_policy_waivers"""
         pass
 
     def test_get_transitive_policy_waivers_by_app_scan_component(self):
-        """Test case for get_transitive_policy_waivers_by_app_scan_component
-
-        """
+        """Test case for get_transitive_policy_waivers_by_app_scan_component"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

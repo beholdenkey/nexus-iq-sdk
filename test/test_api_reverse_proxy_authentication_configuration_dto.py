@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import nexus_iq_sdk
-from nexus_iq_sdk.models.api_reverse_proxy_authentication_configuration_dto import ApiReverseProxyAuthenticationConfigurationDTO  # noqa: E501
+from nexus_iq_sdk.models.api_reverse_proxy_authentication_configuration_dto import (  # noqa: E501
+    ApiReverseProxyAuthenticationConfigurationDTO,
+)
 from nexus_iq_sdk.rest import ApiException
 
 
@@ -35,5 +37,5 @@ class TestApiReverseProxyAuthenticationConfigurationDTO(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

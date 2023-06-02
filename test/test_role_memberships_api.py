@@ -29,41 +29,29 @@ class TestRoleMembershipsApi(unittest.TestCase):
         pass
 
     def test_get_role_memberships_application_or_organization(self):
-        """Test case for get_role_memberships_application_or_organization
-
-        """
+        """Test case for get_role_memberships_application_or_organization"""
         pass
 
     def test_get_role_memberships_global_or_repository_container(self):
-        """Test case for get_role_memberships_global_or_repository_container
-
-        """
+        """Test case for get_role_memberships_global_or_repository_container"""
         pass
 
     def test_grant_role_membership_application_or_organization(self):
-        """Test case for grant_role_membership_application_or_organization
-
-        """
+        """Test case for grant_role_membership_application_or_organization"""
         pass
 
     def test_grant_role_membership_global_or_repository_container(self):
-        """Test case for grant_role_membership_global_or_repository_container
-
-        """
+        """Test case for grant_role_membership_global_or_repository_container"""
         pass
 
     def test_revoke_role_membership_application_or_organization(self):
-        """Test case for revoke_role_membership_application_or_organization
-
-        """
+        """Test case for revoke_role_membership_application_or_organization"""
         pass
 
     def test_revoke_role_membership_global_or_repository_container(self):
-        """Test case for revoke_role_membership_global_or_repository_container
-
-        """
+        """Test case for revoke_role_membership_global_or_repository_container"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

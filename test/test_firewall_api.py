@@ -29,53 +29,37 @@ class TestFirewallApi(unittest.TestCase):
         pass
 
     def test_get_firewall_auto_unquarantine_config(self):
-        """Test case for get_firewall_auto_unquarantine_config
-
-        """
+        """Test case for get_firewall_auto_unquarantine_config"""
         pass
 
     def test_get_firewall_unquarantine_summary(self):
-        """Test case for get_firewall_unquarantine_summary
-
-        """
+        """Test case for get_firewall_unquarantine_summary"""
         pass
 
     def test_get_quarantine_list(self):
-        """Test case for get_quarantine_list
-
-        """
+        """Test case for get_quarantine_list"""
         pass
 
     def test_get_quarantine_summary(self):
-        """Test case for get_quarantine_summary
-
-        """
+        """Test case for get_quarantine_summary"""
         pass
 
     def test_get_quarantined_component_view_anonymous_access(self):
-        """Test case for get_quarantined_component_view_anonymous_access
-
-        """
+        """Test case for get_quarantined_component_view_anonymous_access"""
         pass
 
     def test_get_unquarantine_list(self):
-        """Test case for get_unquarantine_list
-
-        """
+        """Test case for get_unquarantine_list"""
         pass
 
     def test_set_firewall_auto_unquarantine_config(self):
-        """Test case for set_firewall_auto_unquarantine_config
-
-        """
+        """Test case for set_firewall_auto_unquarantine_config"""
         pass
 
     def test_set_quarantined_component_view_anonymous_access(self):
-        """Test case for set_quarantined_component_view_anonymous_access
-
-        """
+        """Test case for set_quarantined_component_view_anonymous_access"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

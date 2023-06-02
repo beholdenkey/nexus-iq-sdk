@@ -1,17 +1,17 @@
 # swagger_client.PoliciesApi
 
-All URIs are relative to */*
+All URIs are relative to _/_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**get_policies**](PoliciesApi.md#get_policies) | **GET** /api/v2/policies | 
+| Method                                          | HTTP request             | Description |
+| ----------------------------------------------- | ------------------------ | ----------- |
+| [**get_policies**](PoliciesApi.md#get_policies) | **GET** /api/v2/policies |
 
 # **get_policies**
+
 > ApiPolicyListDTO get_policies()
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -30,6 +30,7 @@ except ApiException as e:
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -42,8 +43,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

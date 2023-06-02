@@ -1,20 +1,20 @@
 # swagger_client.SearchApi
 
-All URIs are relative to */*
+All URIs are relative to _/_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**create_search_index_async**](SearchApi.md#create_search_index_async) | **POST** /api/v2/search/advanced/index | 
-[**get_export_results**](SearchApi.md#get_export_results) | **GET** /api/v2/search/advanced/export/csv | 
-[**search_component**](SearchApi.md#search_component) | **GET** /api/v2/search/component | 
-[**search_index**](SearchApi.md#search_index) | **GET** /api/v2/search/advanced | 
+| Method                                                                  | HTTP request                               | Description |
+| ----------------------------------------------------------------------- | ------------------------------------------ | ----------- |
+| [**create_search_index_async**](SearchApi.md#create_search_index_async) | **POST** /api/v2/search/advanced/index     |
+| [**get_export_results**](SearchApi.md#get_export_results)               | **GET** /api/v2/search/advanced/export/csv |
+| [**search_component**](SearchApi.md#search_component)                   | **GET** /api/v2/search/component           |
+| [**search_index**](SearchApi.md#search_index)                           | **GET** /api/v2/search/advanced            |
 
 # **create_search_index_async**
+
 > create_search_index_async()
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -32,6 +32,7 @@ except ApiException as e:
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -44,17 +45,17 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: _/_
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_export_results**
+
 > get_export_results(query=query, all_components=all_components)
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -75,10 +76,10 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **query** | **str**|  | [optional] 
- **all_components** | **bool**|  | [optional] [default to false]
+| Name               | Type     | Description | Notes                         |
+| ------------------ | -------- | ----------- | ----------------------------- |
+| **query**          | **str**  |             | [optional]                    |
+| **all_components** | **bool** |             | [optional] [default to false] |
 
 ### Return type
 
@@ -90,17 +91,17 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/csv
+- **Content-Type**: Not defined
+- **Accept**: application/csv
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **search_component**
+
 > ApiSearchResultsDTOV2 search_component(stage_id=stage_id, hash=hash, component_identifier=component_identifier, package_url=package_url)
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -124,12 +125,12 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **stage_id** | **str**|  | [optional] 
- **hash** | **str**|  | [optional] 
- **component_identifier** | [**ComponentIdentifier**](.md)|  | [optional] 
- **package_url** | **str**|  | [optional] 
+| Name                     | Type                           | Description | Notes      |
+| ------------------------ | ------------------------------ | ----------- | ---------- |
+| **stage_id**             | **str**                        |             | [optional] |
+| **hash**                 | **str**                        |             | [optional] |
+| **component_identifier** | [**ComponentIdentifier**](.md) |             | [optional] |
+| **package_url**          | **str**                        |             | [optional] |
 
 ### Return type
 
@@ -141,17 +142,17 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **search_index**
+
 > SearchResultDTO search_index(query=query, page_size=page_size, page=page, all_components=all_components)
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -175,12 +176,12 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **query** | **str**|  | [optional] 
- **page_size** | **int**|  | [optional] [default to 10]
- **page** | **int**|  | [optional] 
- **all_components** | **bool**|  | [optional] [default to false]
+| Name               | Type     | Description | Notes                         |
+| ------------------ | -------- | ----------- | ----------------------------- |
+| **query**          | **str**  |             | [optional]                    |
+| **page_size**      | **int**  |             | [optional] [default to 10]    |
+| **page**           | **int**  |             | [optional]                    |
+| **all_components** | **bool** |             | [optional] [default to false] |
 
 ### Return type
 
@@ -192,8 +193,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

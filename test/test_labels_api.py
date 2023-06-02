@@ -29,41 +29,29 @@ class TestLabelsApi(unittest.TestCase):
         pass
 
     def test_add_label(self):
-        """Test case for add_label
-
-        """
+        """Test case for add_label"""
         pass
 
     def test_delete_label(self):
-        """Test case for delete_label
-
-        """
+        """Test case for delete_label"""
         pass
 
     def test_get_applicable_contexts(self):
-        """Test case for get_applicable_contexts
-
-        """
+        """Test case for get_applicable_contexts"""
         pass
 
     def test_get_applicable_labels(self):
-        """Test case for get_applicable_labels
-
-        """
+        """Test case for get_applicable_labels"""
         pass
 
     def test_get_labels(self):
-        """Test case for get_labels
-
-        """
+        """Test case for get_labels"""
         pass
 
     def test_update_label(self):
-        """Test case for update_label
-
-        """
+        """Test case for update_label"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

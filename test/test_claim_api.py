@@ -29,29 +29,21 @@ class TestClaimApi(unittest.TestCase):
         pass
 
     def test_delete(self):
-        """Test case for delete
-
-        """
+        """Test case for delete"""
         pass
 
     def test_get(self):
-        """Test case for get
-
-        """
+        """Test case for get"""
         pass
 
     def test_get_all(self):
-        """Test case for get_all
-
-        """
+        """Test case for get_all"""
         pass
 
     def test_set(self):
-        """Test case for set
-
-        """
+        """Test case for set"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

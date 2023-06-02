@@ -47,14 +47,20 @@ class CycloneDxApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_by_report_id_with_http_info(application_id, report_id, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_by_report_id_with_http_info(
+                application_id, report_id, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_by_report_id_with_http_info(application_id, report_id, **kwargs)  # noqa: E501
+            (data) = self.get_by_report_id_with_http_info(
+                application_id, report_id, **kwargs
+            )  # noqa: E501
             return data
 
-    def get_by_report_id_with_http_info(self, application_id, report_id, **kwargs):  # noqa: E501
+    def get_by_report_id_with_http_info(
+        self, application_id, report_id, **kwargs
+    ):  # noqa: E501
         """get_by_report_id  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -70,37 +76,39 @@ class CycloneDxApi(object):
                  returns the request thread.
         """
 
-        all_params = ['application_id', 'report_id']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["application_id", "report_id"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_by_report_id" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'application_id' is set
-        if ('application_id' not in params or
-                params['application_id'] is None):
-            raise ValueError("Missing the required parameter `application_id` when calling `get_by_report_id`")  # noqa: E501
+        if "application_id" not in params or params["application_id"] is None:
+            raise ValueError(
+                "Missing the required parameter `application_id` when calling `get_by_report_id`"
+            )  # noqa: E501
         # verify the required parameter 'report_id' is set
-        if ('report_id' not in params or
-                params['report_id'] is None):
-            raise ValueError("Missing the required parameter `report_id` when calling `get_by_report_id`")  # noqa: E501
+        if "report_id" not in params or params["report_id"] is None:
+            raise ValueError(
+                "Missing the required parameter `report_id` when calling `get_by_report_id`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'application_id' in params:
-            path_params['applicationId'] = params['application_id']  # noqa: E501
-        if 'report_id' in params:
-            path_params['reportId'] = params['report_id']  # noqa: E501
+        if "application_id" in params:
+            path_params["applicationId"] = params["application_id"]  # noqa: E501
+        if "report_id" in params:
+            path_params["reportId"] = params["report_id"]  # noqa: E501
 
         query_params = []
 
@@ -111,14 +119,16 @@ class CycloneDxApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/xml'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/xml"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/v2/cycloneDx/{applicationId}/reports/{reportId}', 'GET',
+            "/api/v2/cycloneDx/{applicationId}/reports/{reportId}",
+            "GET",
             path_params,
             query_params,
             header_params,
@@ -127,13 +137,16 @@ class CycloneDxApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
-    def get_by_report_id1(self, application_id, report_id, cdx_version, **kwargs):  # noqa: E501
+    def get_by_report_id1(
+        self, application_id, report_id, cdx_version, **kwargs
+    ):  # noqa: E501
         """get_by_report_id1  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -149,14 +162,20 @@ class CycloneDxApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_by_report_id1_with_http_info(application_id, report_id, cdx_version, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_by_report_id1_with_http_info(
+                application_id, report_id, cdx_version, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_by_report_id1_with_http_info(application_id, report_id, cdx_version, **kwargs)  # noqa: E501
+            (data) = self.get_by_report_id1_with_http_info(
+                application_id, report_id, cdx_version, **kwargs
+            )  # noqa: E501
             return data
 
-    def get_by_report_id1_with_http_info(self, application_id, report_id, cdx_version, **kwargs):  # noqa: E501
+    def get_by_report_id1_with_http_info(
+        self, application_id, report_id, cdx_version, **kwargs
+    ):  # noqa: E501
         """get_by_report_id1  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -173,43 +192,46 @@ class CycloneDxApi(object):
                  returns the request thread.
         """
 
-        all_params = ['application_id', 'report_id', 'cdx_version']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["application_id", "report_id", "cdx_version"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_by_report_id1" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'application_id' is set
-        if ('application_id' not in params or
-                params['application_id'] is None):
-            raise ValueError("Missing the required parameter `application_id` when calling `get_by_report_id1`")  # noqa: E501
+        if "application_id" not in params or params["application_id"] is None:
+            raise ValueError(
+                "Missing the required parameter `application_id` when calling `get_by_report_id1`"
+            )  # noqa: E501
         # verify the required parameter 'report_id' is set
-        if ('report_id' not in params or
-                params['report_id'] is None):
-            raise ValueError("Missing the required parameter `report_id` when calling `get_by_report_id1`")  # noqa: E501
+        if "report_id" not in params or params["report_id"] is None:
+            raise ValueError(
+                "Missing the required parameter `report_id` when calling `get_by_report_id1`"
+            )  # noqa: E501
         # verify the required parameter 'cdx_version' is set
-        if ('cdx_version' not in params or
-                params['cdx_version'] is None):
-            raise ValueError("Missing the required parameter `cdx_version` when calling `get_by_report_id1`")  # noqa: E501
+        if "cdx_version" not in params or params["cdx_version"] is None:
+            raise ValueError(
+                "Missing the required parameter `cdx_version` when calling `get_by_report_id1`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'application_id' in params:
-            path_params['applicationId'] = params['application_id']  # noqa: E501
-        if 'report_id' in params:
-            path_params['reportId'] = params['report_id']  # noqa: E501
-        if 'cdx_version' in params:
-            path_params['cdxVersion'] = params['cdx_version']  # noqa: E501
+        if "application_id" in params:
+            path_params["applicationId"] = params["application_id"]  # noqa: E501
+        if "report_id" in params:
+            path_params["reportId"] = params["report_id"]  # noqa: E501
+        if "cdx_version" in params:
+            path_params["cdxVersion"] = params["cdx_version"]  # noqa: E501
 
         query_params = []
 
@@ -220,14 +242,16 @@ class CycloneDxApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/xml', 'application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/xml", "application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/v2/cycloneDx/{cdxVersion}/{applicationId}/reports/{reportId}', 'GET',
+            "/api/v2/cycloneDx/{cdxVersion}/{applicationId}/reports/{reportId}",
+            "GET",
             path_params,
             query_params,
             header_params,
@@ -236,11 +260,12 @@ class CycloneDxApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_latest(self, application_id, stage_id, **kwargs):  # noqa: E501
         """get_latest  # noqa: E501
@@ -257,14 +282,20 @@ class CycloneDxApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_latest_with_http_info(application_id, stage_id, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_latest_with_http_info(
+                application_id, stage_id, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_latest_with_http_info(application_id, stage_id, **kwargs)  # noqa: E501
+            (data) = self.get_latest_with_http_info(
+                application_id, stage_id, **kwargs
+            )  # noqa: E501
             return data
 
-    def get_latest_with_http_info(self, application_id, stage_id, **kwargs):  # noqa: E501
+    def get_latest_with_http_info(
+        self, application_id, stage_id, **kwargs
+    ):  # noqa: E501
         """get_latest  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -280,37 +311,39 @@ class CycloneDxApi(object):
                  returns the request thread.
         """
 
-        all_params = ['application_id', 'stage_id']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["application_id", "stage_id"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_latest" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'application_id' is set
-        if ('application_id' not in params or
-                params['application_id'] is None):
-            raise ValueError("Missing the required parameter `application_id` when calling `get_latest`")  # noqa: E501
+        if "application_id" not in params or params["application_id"] is None:
+            raise ValueError(
+                "Missing the required parameter `application_id` when calling `get_latest`"
+            )  # noqa: E501
         # verify the required parameter 'stage_id' is set
-        if ('stage_id' not in params or
-                params['stage_id'] is None):
-            raise ValueError("Missing the required parameter `stage_id` when calling `get_latest`")  # noqa: E501
+        if "stage_id" not in params or params["stage_id"] is None:
+            raise ValueError(
+                "Missing the required parameter `stage_id` when calling `get_latest`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'application_id' in params:
-            path_params['applicationId'] = params['application_id']  # noqa: E501
-        if 'stage_id' in params:
-            path_params['stageId'] = params['stage_id']  # noqa: E501
+        if "application_id" in params:
+            path_params["applicationId"] = params["application_id"]  # noqa: E501
+        if "stage_id" in params:
+            path_params["stageId"] = params["stage_id"]  # noqa: E501
 
         query_params = []
 
@@ -321,14 +354,16 @@ class CycloneDxApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/xml'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/xml"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/v2/cycloneDx/{applicationId}/stages/{stageId}', 'GET',
+            "/api/v2/cycloneDx/{applicationId}/stages/{stageId}",
+            "GET",
             path_params,
             query_params,
             header_params,
@@ -337,13 +372,16 @@ class CycloneDxApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
-    def get_latest1(self, application_id, stage_id, cdx_version, **kwargs):  # noqa: E501
+    def get_latest1(
+        self, application_id, stage_id, cdx_version, **kwargs
+    ):  # noqa: E501
         """get_latest1  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -359,14 +397,20 @@ class CycloneDxApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_latest1_with_http_info(application_id, stage_id, cdx_version, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_latest1_with_http_info(
+                application_id, stage_id, cdx_version, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_latest1_with_http_info(application_id, stage_id, cdx_version, **kwargs)  # noqa: E501
+            (data) = self.get_latest1_with_http_info(
+                application_id, stage_id, cdx_version, **kwargs
+            )  # noqa: E501
             return data
 
-    def get_latest1_with_http_info(self, application_id, stage_id, cdx_version, **kwargs):  # noqa: E501
+    def get_latest1_with_http_info(
+        self, application_id, stage_id, cdx_version, **kwargs
+    ):  # noqa: E501
         """get_latest1  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -383,43 +427,46 @@ class CycloneDxApi(object):
                  returns the request thread.
         """
 
-        all_params = ['application_id', 'stage_id', 'cdx_version']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["application_id", "stage_id", "cdx_version"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_latest1" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'application_id' is set
-        if ('application_id' not in params or
-                params['application_id'] is None):
-            raise ValueError("Missing the required parameter `application_id` when calling `get_latest1`")  # noqa: E501
+        if "application_id" not in params or params["application_id"] is None:
+            raise ValueError(
+                "Missing the required parameter `application_id` when calling `get_latest1`"
+            )  # noqa: E501
         # verify the required parameter 'stage_id' is set
-        if ('stage_id' not in params or
-                params['stage_id'] is None):
-            raise ValueError("Missing the required parameter `stage_id` when calling `get_latest1`")  # noqa: E501
+        if "stage_id" not in params or params["stage_id"] is None:
+            raise ValueError(
+                "Missing the required parameter `stage_id` when calling `get_latest1`"
+            )  # noqa: E501
         # verify the required parameter 'cdx_version' is set
-        if ('cdx_version' not in params or
-                params['cdx_version'] is None):
-            raise ValueError("Missing the required parameter `cdx_version` when calling `get_latest1`")  # noqa: E501
+        if "cdx_version" not in params or params["cdx_version"] is None:
+            raise ValueError(
+                "Missing the required parameter `cdx_version` when calling `get_latest1`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'application_id' in params:
-            path_params['applicationId'] = params['application_id']  # noqa: E501
-        if 'stage_id' in params:
-            path_params['stageId'] = params['stage_id']  # noqa: E501
-        if 'cdx_version' in params:
-            path_params['cdxVersion'] = params['cdx_version']  # noqa: E501
+        if "application_id" in params:
+            path_params["applicationId"] = params["application_id"]  # noqa: E501
+        if "stage_id" in params:
+            path_params["stageId"] = params["stage_id"]  # noqa: E501
+        if "cdx_version" in params:
+            path_params["cdxVersion"] = params["cdx_version"]  # noqa: E501
 
         query_params = []
 
@@ -430,14 +477,16 @@ class CycloneDxApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/xml', 'application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/xml", "application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/v2/cycloneDx/{cdxVersion}/{applicationId}/stages/{stageId}', 'GET',
+            "/api/v2/cycloneDx/{cdxVersion}/{applicationId}/stages/{stageId}",
+            "GET",
             path_params,
             query_params,
             header_params,
@@ -446,8 +495,9 @@ class CycloneDxApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )

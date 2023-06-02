@@ -29,11 +29,9 @@ class TestSecurityOverridesApi(unittest.TestCase):
         pass
 
     def test_get_security_vulnerability_overrides(self):
-        """Test case for get_security_vulnerability_overrides
-
-        """
+        """Test case for get_security_vulnerability_overrides"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

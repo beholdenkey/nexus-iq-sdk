@@ -29,35 +29,25 @@ class TestConfigApi(unittest.TestCase):
         pass
 
     def test_delete_configuration(self):
-        """Test case for delete_configuration
-
-        """
+        """Test case for delete_configuration"""
         pass
 
     def test_disable_feature(self):
-        """Test case for disable_feature
-
-        """
+        """Test case for disable_feature"""
         pass
 
     def test_enabled_feature(self):
-        """Test case for enabled_feature
-
-        """
+        """Test case for enabled_feature"""
         pass
 
     def test_get_configuration(self):
-        """Test case for get_configuration
-
-        """
+        """Test case for get_configuration"""
         pass
 
     def test_set_configuration(self):
-        """Test case for set_configuration
-
-        """
+        """Test case for set_configuration"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -29,35 +29,25 @@ class TestSourceControlApi(unittest.TestCase):
         pass
 
     def test_add_or_update_source_control(self):
-        """Test case for add_or_update_source_control
-
-        """
+        """Test case for add_or_update_source_control"""
         pass
 
     def test_add_source_control(self):
-        """Test case for add_source_control
-
-        """
+        """Test case for add_source_control"""
         pass
 
     def test_delete_source_control(self):
-        """Test case for delete_source_control
-
-        """
+        """Test case for delete_source_control"""
         pass
 
     def test_get_source_control1(self):
-        """Test case for get_source_control1
-
-        """
+        """Test case for get_source_control1"""
         pass
 
     def test_update_source_control(self):
-        """Test case for update_source_control
-
-        """
+        """Test case for update_source_control"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

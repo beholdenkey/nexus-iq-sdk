@@ -32,7 +32,9 @@ class RoleMembershipsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def get_role_memberships_application_or_organization(self, owner_type, internal_owner_id, **kwargs):  # noqa: E501
+    def get_role_memberships_application_or_organization(
+        self, owner_type, internal_owner_id, **kwargs
+    ):  # noqa: E501
         """get_role_memberships_application_or_organization  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -47,14 +49,22 @@ class RoleMembershipsApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_role_memberships_application_or_organization_with_http_info(owner_type, internal_owner_id, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.get_role_memberships_application_or_organization_with_http_info(
+                owner_type, internal_owner_id, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.get_role_memberships_application_or_organization_with_http_info(owner_type, internal_owner_id, **kwargs)  # noqa: E501
+            (
+                data
+            ) = self.get_role_memberships_application_or_organization_with_http_info(
+                owner_type, internal_owner_id, **kwargs
+            )  # noqa: E501
             return data
 
-    def get_role_memberships_application_or_organization_with_http_info(self, owner_type, internal_owner_id, **kwargs):  # noqa: E501
+    def get_role_memberships_application_or_organization_with_http_info(
+        self, owner_type, internal_owner_id, **kwargs
+    ):  # noqa: E501
         """get_role_memberships_application_or_organization  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -70,37 +80,39 @@ class RoleMembershipsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['owner_type', 'internal_owner_id']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["owner_type", "internal_owner_id"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_role_memberships_application_or_organization" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'owner_type' is set
-        if ('owner_type' not in params or
-                params['owner_type'] is None):
-            raise ValueError("Missing the required parameter `owner_type` when calling `get_role_memberships_application_or_organization`")  # noqa: E501
+        if "owner_type" not in params or params["owner_type"] is None:
+            raise ValueError(
+                "Missing the required parameter `owner_type` when calling `get_role_memberships_application_or_organization`"
+            )  # noqa: E501
         # verify the required parameter 'internal_owner_id' is set
-        if ('internal_owner_id' not in params or
-                params['internal_owner_id'] is None):
-            raise ValueError("Missing the required parameter `internal_owner_id` when calling `get_role_memberships_application_or_organization`")  # noqa: E501
+        if "internal_owner_id" not in params or params["internal_owner_id"] is None:
+            raise ValueError(
+                "Missing the required parameter `internal_owner_id` when calling `get_role_memberships_application_or_organization`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'owner_type' in params:
-            path_params['ownerType'] = params['owner_type']  # noqa: E501
-        if 'internal_owner_id' in params:
-            path_params['internalOwnerId'] = params['internal_owner_id']  # noqa: E501
+        if "owner_type" in params:
+            path_params["ownerType"] = params["owner_type"]  # noqa: E501
+        if "internal_owner_id" in params:
+            path_params["internalOwnerId"] = params["internal_owner_id"]  # noqa: E501
 
         query_params = []
 
@@ -111,29 +123,34 @@ class RoleMembershipsApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/v2/roleMemberships/{ownerType}/{internalOwnerId}', 'GET',
+            "/api/v2/roleMemberships/{ownerType}/{internalOwnerId}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ApiRoleMemberMappingListDTO',  # noqa: E501
+            response_type="ApiRoleMemberMappingListDTO",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
-    def get_role_memberships_global_or_repository_container(self, owner_type, **kwargs):  # noqa: E501
+    def get_role_memberships_global_or_repository_container(
+        self, owner_type, **kwargs
+    ):  # noqa: E501
         """get_role_memberships_global_or_repository_container  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -147,14 +164,24 @@ class RoleMembershipsApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_role_memberships_global_or_repository_container_with_http_info(owner_type, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return (
+                self.get_role_memberships_global_or_repository_container_with_http_info(
+                    owner_type, **kwargs
+                )
+            )  # noqa: E501
         else:
-            (data) = self.get_role_memberships_global_or_repository_container_with_http_info(owner_type, **kwargs)  # noqa: E501
+            (
+                data
+            ) = self.get_role_memberships_global_or_repository_container_with_http_info(
+                owner_type, **kwargs
+            )  # noqa: E501
             return data
 
-    def get_role_memberships_global_or_repository_container_with_http_info(self, owner_type, **kwargs):  # noqa: E501
+    def get_role_memberships_global_or_repository_container_with_http_info(
+        self, owner_type, **kwargs
+    ):  # noqa: E501
         """get_role_memberships_global_or_repository_container  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -169,31 +196,33 @@ class RoleMembershipsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['owner_type']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["owner_type"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_role_memberships_global_or_repository_container" % key
+                    " to method get_role_memberships_global_or_repository_container"
+                    % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'owner_type' is set
-        if ('owner_type' not in params or
-                params['owner_type'] is None):
-            raise ValueError("Missing the required parameter `owner_type` when calling `get_role_memberships_global_or_repository_container`")  # noqa: E501
+        if "owner_type" not in params or params["owner_type"] is None:
+            raise ValueError(
+                "Missing the required parameter `owner_type` when calling `get_role_memberships_global_or_repository_container`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'owner_type' in params:
-            path_params['ownerType'] = params['owner_type']  # noqa: E501
+        if "owner_type" in params:
+            path_params["ownerType"] = params["owner_type"]  # noqa: E501
 
         query_params = []
 
@@ -204,29 +233,34 @@ class RoleMembershipsApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/v2/roleMemberships/{ownerType}', 'GET',
+            "/api/v2/roleMemberships/{ownerType}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ApiRoleMemberMappingListDTO',  # noqa: E501
+            response_type="ApiRoleMemberMappingListDTO",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
-    def grant_role_membership_application_or_organization(self, owner_type, internal_owner_id, role_id, member_type, member_name, **kwargs):  # noqa: E501
+    def grant_role_membership_application_or_organization(
+        self, owner_type, internal_owner_id, role_id, member_type, member_name, **kwargs
+    ):  # noqa: E501
         """grant_role_membership_application_or_organization  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -244,14 +278,34 @@ class RoleMembershipsApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.grant_role_membership_application_or_organization_with_http_info(owner_type, internal_owner_id, role_id, member_type, member_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return (
+                self.grant_role_membership_application_or_organization_with_http_info(
+                    owner_type,
+                    internal_owner_id,
+                    role_id,
+                    member_type,
+                    member_name,
+                    **kwargs
+                )
+            )  # noqa: E501
         else:
-            (data) = self.grant_role_membership_application_or_organization_with_http_info(owner_type, internal_owner_id, role_id, member_type, member_name, **kwargs)  # noqa: E501
+            (
+                data
+            ) = self.grant_role_membership_application_or_organization_with_http_info(
+                owner_type,
+                internal_owner_id,
+                role_id,
+                member_type,
+                member_name,
+                **kwargs
+            )  # noqa: E501
             return data
 
-    def grant_role_membership_application_or_organization_with_http_info(self, owner_type, internal_owner_id, role_id, member_type, member_name, **kwargs):  # noqa: E501
+    def grant_role_membership_application_or_organization_with_http_info(
+        self, owner_type, internal_owner_id, role_id, member_type, member_name, **kwargs
+    ):  # noqa: E501
         """grant_role_membership_application_or_organization  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -270,55 +324,66 @@ class RoleMembershipsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['owner_type', 'internal_owner_id', 'role_id', 'member_type', 'member_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = [
+            "owner_type",
+            "internal_owner_id",
+            "role_id",
+            "member_type",
+            "member_name",
+        ]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method grant_role_membership_application_or_organization" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'owner_type' is set
-        if ('owner_type' not in params or
-                params['owner_type'] is None):
-            raise ValueError("Missing the required parameter `owner_type` when calling `grant_role_membership_application_or_organization`")  # noqa: E501
+        if "owner_type" not in params or params["owner_type"] is None:
+            raise ValueError(
+                "Missing the required parameter `owner_type` when calling `grant_role_membership_application_or_organization`"
+            )  # noqa: E501
         # verify the required parameter 'internal_owner_id' is set
-        if ('internal_owner_id' not in params or
-                params['internal_owner_id'] is None):
-            raise ValueError("Missing the required parameter `internal_owner_id` when calling `grant_role_membership_application_or_organization`")  # noqa: E501
+        if "internal_owner_id" not in params or params["internal_owner_id"] is None:
+            raise ValueError(
+                "Missing the required parameter `internal_owner_id` when calling `grant_role_membership_application_or_organization`"
+            )  # noqa: E501
         # verify the required parameter 'role_id' is set
-        if ('role_id' not in params or
-                params['role_id'] is None):
-            raise ValueError("Missing the required parameter `role_id` when calling `grant_role_membership_application_or_organization`")  # noqa: E501
+        if "role_id" not in params or params["role_id"] is None:
+            raise ValueError(
+                "Missing the required parameter `role_id` when calling `grant_role_membership_application_or_organization`"
+            )  # noqa: E501
         # verify the required parameter 'member_type' is set
-        if ('member_type' not in params or
-                params['member_type'] is None):
-            raise ValueError("Missing the required parameter `member_type` when calling `grant_role_membership_application_or_organization`")  # noqa: E501
+        if "member_type" not in params or params["member_type"] is None:
+            raise ValueError(
+                "Missing the required parameter `member_type` when calling `grant_role_membership_application_or_organization`"
+            )  # noqa: E501
         # verify the required parameter 'member_name' is set
-        if ('member_name' not in params or
-                params['member_name'] is None):
-            raise ValueError("Missing the required parameter `member_name` when calling `grant_role_membership_application_or_organization`")  # noqa: E501
+        if "member_name" not in params or params["member_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `member_name` when calling `grant_role_membership_application_or_organization`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'owner_type' in params:
-            path_params['ownerType'] = params['owner_type']  # noqa: E501
-        if 'internal_owner_id' in params:
-            path_params['internalOwnerId'] = params['internal_owner_id']  # noqa: E501
-        if 'role_id' in params:
-            path_params['roleId'] = params['role_id']  # noqa: E501
-        if 'member_type' in params:
-            path_params['memberType'] = params['member_type']  # noqa: E501
-        if 'member_name' in params:
-            path_params['memberName'] = params['member_name']  # noqa: E501
+        if "owner_type" in params:
+            path_params["ownerType"] = params["owner_type"]  # noqa: E501
+        if "internal_owner_id" in params:
+            path_params["internalOwnerId"] = params["internal_owner_id"]  # noqa: E501
+        if "role_id" in params:
+            path_params["roleId"] = params["role_id"]  # noqa: E501
+        if "member_type" in params:
+            path_params["memberType"] = params["member_type"]  # noqa: E501
+        if "member_name" in params:
+            path_params["memberName"] = params["member_name"]  # noqa: E501
 
         query_params = []
 
@@ -329,14 +394,16 @@ class RoleMembershipsApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['*/*'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["*/*"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/v2/roleMemberships/{ownerType}/{internalOwnerId}/role/{roleId}/{memberType}/{memberName}', 'PUT',
+            "/api/v2/roleMemberships/{ownerType}/{internalOwnerId}/role/{roleId}/{memberType}/{memberName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -345,13 +412,16 @@ class RoleMembershipsApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
-    def grant_role_membership_global_or_repository_container(self, owner_type, role_id, member_type, member_name, **kwargs):  # noqa: E501
+    def grant_role_membership_global_or_repository_container(
+        self, owner_type, role_id, member_type, member_name, **kwargs
+    ):  # noqa: E501
         """grant_role_membership_global_or_repository_container  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -368,14 +438,22 @@ class RoleMembershipsApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.grant_role_membership_global_or_repository_container_with_http_info(owner_type, role_id, member_type, member_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.grant_role_membership_global_or_repository_container_with_http_info(
+                owner_type, role_id, member_type, member_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.grant_role_membership_global_or_repository_container_with_http_info(owner_type, role_id, member_type, member_name, **kwargs)  # noqa: E501
+            (
+                data
+            ) = self.grant_role_membership_global_or_repository_container_with_http_info(
+                owner_type, role_id, member_type, member_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def grant_role_membership_global_or_repository_container_with_http_info(self, owner_type, role_id, member_type, member_name, **kwargs):  # noqa: E501
+    def grant_role_membership_global_or_repository_container_with_http_info(
+        self, owner_type, role_id, member_type, member_name, **kwargs
+    ):  # noqa: E501
         """grant_role_membership_global_or_repository_container  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -393,49 +471,59 @@ class RoleMembershipsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['owner_type', 'role_id', 'member_type', 'member_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = [
+            "owner_type",
+            "role_id",
+            "member_type",
+            "member_name",
+        ]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method grant_role_membership_global_or_repository_container" % key
+                    " to method grant_role_membership_global_or_repository_container"
+                    % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'owner_type' is set
-        if ('owner_type' not in params or
-                params['owner_type'] is None):
-            raise ValueError("Missing the required parameter `owner_type` when calling `grant_role_membership_global_or_repository_container`")  # noqa: E501
+        if "owner_type" not in params or params["owner_type"] is None:
+            raise ValueError(
+                "Missing the required parameter `owner_type` when calling `grant_role_membership_global_or_repository_container`"
+            )  # noqa: E501
         # verify the required parameter 'role_id' is set
-        if ('role_id' not in params or
-                params['role_id'] is None):
-            raise ValueError("Missing the required parameter `role_id` when calling `grant_role_membership_global_or_repository_container`")  # noqa: E501
+        if "role_id" not in params or params["role_id"] is None:
+            raise ValueError(
+                "Missing the required parameter `role_id` when calling `grant_role_membership_global_or_repository_container`"
+            )  # noqa: E501
         # verify the required parameter 'member_type' is set
-        if ('member_type' not in params or
-                params['member_type'] is None):
-            raise ValueError("Missing the required parameter `member_type` when calling `grant_role_membership_global_or_repository_container`")  # noqa: E501
+        if "member_type" not in params or params["member_type"] is None:
+            raise ValueError(
+                "Missing the required parameter `member_type` when calling `grant_role_membership_global_or_repository_container`"
+            )  # noqa: E501
         # verify the required parameter 'member_name' is set
-        if ('member_name' not in params or
-                params['member_name'] is None):
-            raise ValueError("Missing the required parameter `member_name` when calling `grant_role_membership_global_or_repository_container`")  # noqa: E501
+        if "member_name" not in params or params["member_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `member_name` when calling `grant_role_membership_global_or_repository_container`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'owner_type' in params:
-            path_params['ownerType'] = params['owner_type']  # noqa: E501
-        if 'role_id' in params:
-            path_params['roleId'] = params['role_id']  # noqa: E501
-        if 'member_type' in params:
-            path_params['memberType'] = params['member_type']  # noqa: E501
-        if 'member_name' in params:
-            path_params['memberName'] = params['member_name']  # noqa: E501
+        if "owner_type" in params:
+            path_params["ownerType"] = params["owner_type"]  # noqa: E501
+        if "role_id" in params:
+            path_params["roleId"] = params["role_id"]  # noqa: E501
+        if "member_type" in params:
+            path_params["memberType"] = params["member_type"]  # noqa: E501
+        if "member_name" in params:
+            path_params["memberName"] = params["member_name"]  # noqa: E501
 
         query_params = []
 
@@ -446,14 +534,16 @@ class RoleMembershipsApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['*/*'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["*/*"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/v2/roleMemberships/{ownerType}/role/{roleId}/{memberType}/{memberName}', 'PUT',
+            "/api/v2/roleMemberships/{ownerType}/role/{roleId}/{memberType}/{memberName}",
+            "PUT",
             path_params,
             query_params,
             header_params,
@@ -462,13 +552,16 @@ class RoleMembershipsApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
-    def revoke_role_membership_application_or_organization(self, owner_type, internal_owner_id, role_id, member_type, member_name, **kwargs):  # noqa: E501
+    def revoke_role_membership_application_or_organization(
+        self, owner_type, internal_owner_id, role_id, member_type, member_name, **kwargs
+    ):  # noqa: E501
         """revoke_role_membership_application_or_organization  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -486,14 +579,34 @@ class RoleMembershipsApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.revoke_role_membership_application_or_organization_with_http_info(owner_type, internal_owner_id, role_id, member_type, member_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return (
+                self.revoke_role_membership_application_or_organization_with_http_info(
+                    owner_type,
+                    internal_owner_id,
+                    role_id,
+                    member_type,
+                    member_name,
+                    **kwargs
+                )
+            )  # noqa: E501
         else:
-            (data) = self.revoke_role_membership_application_or_organization_with_http_info(owner_type, internal_owner_id, role_id, member_type, member_name, **kwargs)  # noqa: E501
+            (
+                data
+            ) = self.revoke_role_membership_application_or_organization_with_http_info(
+                owner_type,
+                internal_owner_id,
+                role_id,
+                member_type,
+                member_name,
+                **kwargs
+            )  # noqa: E501
             return data
 
-    def revoke_role_membership_application_or_organization_with_http_info(self, owner_type, internal_owner_id, role_id, member_type, member_name, **kwargs):  # noqa: E501
+    def revoke_role_membership_application_or_organization_with_http_info(
+        self, owner_type, internal_owner_id, role_id, member_type, member_name, **kwargs
+    ):  # noqa: E501
         """revoke_role_membership_application_or_organization  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -512,55 +625,67 @@ class RoleMembershipsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['owner_type', 'internal_owner_id', 'role_id', 'member_type', 'member_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = [
+            "owner_type",
+            "internal_owner_id",
+            "role_id",
+            "member_type",
+            "member_name",
+        ]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method revoke_role_membership_application_or_organization" % key
+                    " to method revoke_role_membership_application_or_organization"
+                    % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'owner_type' is set
-        if ('owner_type' not in params or
-                params['owner_type'] is None):
-            raise ValueError("Missing the required parameter `owner_type` when calling `revoke_role_membership_application_or_organization`")  # noqa: E501
+        if "owner_type" not in params or params["owner_type"] is None:
+            raise ValueError(
+                "Missing the required parameter `owner_type` when calling `revoke_role_membership_application_or_organization`"
+            )  # noqa: E501
         # verify the required parameter 'internal_owner_id' is set
-        if ('internal_owner_id' not in params or
-                params['internal_owner_id'] is None):
-            raise ValueError("Missing the required parameter `internal_owner_id` when calling `revoke_role_membership_application_or_organization`")  # noqa: E501
+        if "internal_owner_id" not in params or params["internal_owner_id"] is None:
+            raise ValueError(
+                "Missing the required parameter `internal_owner_id` when calling `revoke_role_membership_application_or_organization`"
+            )  # noqa: E501
         # verify the required parameter 'role_id' is set
-        if ('role_id' not in params or
-                params['role_id'] is None):
-            raise ValueError("Missing the required parameter `role_id` when calling `revoke_role_membership_application_or_organization`")  # noqa: E501
+        if "role_id" not in params or params["role_id"] is None:
+            raise ValueError(
+                "Missing the required parameter `role_id` when calling `revoke_role_membership_application_or_organization`"
+            )  # noqa: E501
         # verify the required parameter 'member_type' is set
-        if ('member_type' not in params or
-                params['member_type'] is None):
-            raise ValueError("Missing the required parameter `member_type` when calling `revoke_role_membership_application_or_organization`")  # noqa: E501
+        if "member_type" not in params or params["member_type"] is None:
+            raise ValueError(
+                "Missing the required parameter `member_type` when calling `revoke_role_membership_application_or_organization`"
+            )  # noqa: E501
         # verify the required parameter 'member_name' is set
-        if ('member_name' not in params or
-                params['member_name'] is None):
-            raise ValueError("Missing the required parameter `member_name` when calling `revoke_role_membership_application_or_organization`")  # noqa: E501
+        if "member_name" not in params or params["member_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `member_name` when calling `revoke_role_membership_application_or_organization`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'owner_type' in params:
-            path_params['ownerType'] = params['owner_type']  # noqa: E501
-        if 'internal_owner_id' in params:
-            path_params['internalOwnerId'] = params['internal_owner_id']  # noqa: E501
-        if 'role_id' in params:
-            path_params['roleId'] = params['role_id']  # noqa: E501
-        if 'member_type' in params:
-            path_params['memberType'] = params['member_type']  # noqa: E501
-        if 'member_name' in params:
-            path_params['memberName'] = params['member_name']  # noqa: E501
+        if "owner_type" in params:
+            path_params["ownerType"] = params["owner_type"]  # noqa: E501
+        if "internal_owner_id" in params:
+            path_params["internalOwnerId"] = params["internal_owner_id"]  # noqa: E501
+        if "role_id" in params:
+            path_params["roleId"] = params["role_id"]  # noqa: E501
+        if "member_type" in params:
+            path_params["memberType"] = params["member_type"]  # noqa: E501
+        if "member_name" in params:
+            path_params["memberName"] = params["member_name"]  # noqa: E501
 
         query_params = []
 
@@ -571,14 +696,16 @@ class RoleMembershipsApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['*/*'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["*/*"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/v2/roleMemberships/{ownerType}/{internalOwnerId}/role/{roleId}/{memberType}/{memberName}', 'DELETE',
+            "/api/v2/roleMemberships/{ownerType}/{internalOwnerId}/role/{roleId}/{memberType}/{memberName}",
+            "DELETE",
             path_params,
             query_params,
             header_params,
@@ -587,13 +714,16 @@ class RoleMembershipsApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
-    def revoke_role_membership_global_or_repository_container(self, owner_type, role_id, member_type, member_name, **kwargs):  # noqa: E501
+    def revoke_role_membership_global_or_repository_container(
+        self, owner_type, role_id, member_type, member_name, **kwargs
+    ):  # noqa: E501
         """revoke_role_membership_global_or_repository_container  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -610,14 +740,22 @@ class RoleMembershipsApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.revoke_role_membership_global_or_repository_container_with_http_info(owner_type, role_id, member_type, member_name, **kwargs)  # noqa: E501
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
+            return self.revoke_role_membership_global_or_repository_container_with_http_info(
+                owner_type, role_id, member_type, member_name, **kwargs
+            )  # noqa: E501
         else:
-            (data) = self.revoke_role_membership_global_or_repository_container_with_http_info(owner_type, role_id, member_type, member_name, **kwargs)  # noqa: E501
+            (
+                data
+            ) = self.revoke_role_membership_global_or_repository_container_with_http_info(
+                owner_type, role_id, member_type, member_name, **kwargs
+            )  # noqa: E501
             return data
 
-    def revoke_role_membership_global_or_repository_container_with_http_info(self, owner_type, role_id, member_type, member_name, **kwargs):  # noqa: E501
+    def revoke_role_membership_global_or_repository_container_with_http_info(
+        self, owner_type, role_id, member_type, member_name, **kwargs
+    ):  # noqa: E501
         """revoke_role_membership_global_or_repository_container  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -635,49 +773,59 @@ class RoleMembershipsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['owner_type', 'role_id', 'member_type', 'member_name']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = [
+            "owner_type",
+            "role_id",
+            "member_type",
+            "member_name",
+        ]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method revoke_role_membership_global_or_repository_container" % key
+                    " to method revoke_role_membership_global_or_repository_container"
+                    % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'owner_type' is set
-        if ('owner_type' not in params or
-                params['owner_type'] is None):
-            raise ValueError("Missing the required parameter `owner_type` when calling `revoke_role_membership_global_or_repository_container`")  # noqa: E501
+        if "owner_type" not in params or params["owner_type"] is None:
+            raise ValueError(
+                "Missing the required parameter `owner_type` when calling `revoke_role_membership_global_or_repository_container`"
+            )  # noqa: E501
         # verify the required parameter 'role_id' is set
-        if ('role_id' not in params or
-                params['role_id'] is None):
-            raise ValueError("Missing the required parameter `role_id` when calling `revoke_role_membership_global_or_repository_container`")  # noqa: E501
+        if "role_id" not in params or params["role_id"] is None:
+            raise ValueError(
+                "Missing the required parameter `role_id` when calling `revoke_role_membership_global_or_repository_container`"
+            )  # noqa: E501
         # verify the required parameter 'member_type' is set
-        if ('member_type' not in params or
-                params['member_type'] is None):
-            raise ValueError("Missing the required parameter `member_type` when calling `revoke_role_membership_global_or_repository_container`")  # noqa: E501
+        if "member_type" not in params or params["member_type"] is None:
+            raise ValueError(
+                "Missing the required parameter `member_type` when calling `revoke_role_membership_global_or_repository_container`"
+            )  # noqa: E501
         # verify the required parameter 'member_name' is set
-        if ('member_name' not in params or
-                params['member_name'] is None):
-            raise ValueError("Missing the required parameter `member_name` when calling `revoke_role_membership_global_or_repository_container`")  # noqa: E501
+        if "member_name" not in params or params["member_name"] is None:
+            raise ValueError(
+                "Missing the required parameter `member_name` when calling `revoke_role_membership_global_or_repository_container`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'owner_type' in params:
-            path_params['ownerType'] = params['owner_type']  # noqa: E501
-        if 'role_id' in params:
-            path_params['roleId'] = params['role_id']  # noqa: E501
-        if 'member_type' in params:
-            path_params['memberType'] = params['member_type']  # noqa: E501
-        if 'member_name' in params:
-            path_params['memberName'] = params['member_name']  # noqa: E501
+        if "owner_type" in params:
+            path_params["ownerType"] = params["owner_type"]  # noqa: E501
+        if "role_id" in params:
+            path_params["roleId"] = params["role_id"]  # noqa: E501
+        if "member_type" in params:
+            path_params["memberType"] = params["member_type"]  # noqa: E501
+        if "member_name" in params:
+            path_params["memberName"] = params["member_name"]  # noqa: E501
 
         query_params = []
 
@@ -688,14 +836,16 @@ class RoleMembershipsApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['*/*'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["*/*"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/v2/roleMemberships/{ownerType}/role/{roleId}/{memberType}/{memberName}', 'DELETE',
+            "/api/v2/roleMemberships/{ownerType}/role/{roleId}/{memberType}/{memberName}",
+            "DELETE",
             path_params,
             query_params,
             header_params,
@@ -704,8 +854,9 @@ class RoleMembershipsApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )

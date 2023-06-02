@@ -46,8 +46,8 @@ class EndpointsApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.get_open_api_with_http_info(api_type, **kwargs)  # noqa: E501
         else:
             (data) = self.get_open_api_with_http_info(api_type, **kwargs)  # noqa: E501
@@ -68,31 +68,32 @@ class EndpointsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['api_type']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["api_type"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_open_api" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
         # verify the required parameter 'api_type' is set
-        if ('api_type' not in params or
-                params['api_type'] is None):
-            raise ValueError("Missing the required parameter `api_type` when calling `get_open_api`")  # noqa: E501
+        if "api_type" not in params or params["api_type"] is None:
+            raise ValueError(
+                "Missing the required parameter `api_type` when calling `get_open_api`"
+            )  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'api_type' in params:
-            path_params['apiType'] = params['api_type']  # noqa: E501
+        if "api_type" in params:
+            path_params["apiType"] = params["api_type"]  # noqa: E501
 
         query_params = []
 
@@ -103,24 +104,27 @@ class EndpointsApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/v2/endpoints/{apiType}', 'GET',
+            "/api/v2/endpoints/{apiType}",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='str',  # noqa: E501
+            response_type="str",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )

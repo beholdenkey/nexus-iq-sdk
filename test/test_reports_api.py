@@ -29,47 +29,33 @@ class TestReportsApi(unittest.TestCase):
         pass
 
     def test_get_all1(self):
-        """Test case for get_all1
-
-        """
+        """Test case for get_all1"""
         pass
 
     def test_get_by_application_id(self):
-        """Test case for get_by_application_id
-
-        """
+        """Test case for get_by_application_id"""
         pass
 
     def test_get_components_in_quarantine(self):
-        """Test case for get_components_in_quarantine
-
-        """
+        """Test case for get_components_in_quarantine"""
         pass
 
     def test_get_components_with_waivers(self):
-        """Test case for get_components_with_waivers
-
-        """
+        """Test case for get_components_with_waivers"""
         pass
 
     def test_get_metrics(self):
-        """Test case for get_metrics
-
-        """
+        """Test case for get_metrics"""
         pass
 
     def test_get_report_history_for_application(self):
-        """Test case for get_report_history_for_application
-
-        """
+        """Test case for get_report_history_for_application"""
         pass
 
     def test_get_stale_waivers(self):
-        """Test case for get_stale_waivers
-
-        """
+        """Test case for get_stale_waivers"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

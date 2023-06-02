@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import nexus_iq_sdk
-from nexus_iq_sdk.models.api_role_member_mapping_dto import ApiRoleMemberMappingDTO  # noqa: E501
+from nexus_iq_sdk.models.api_role_member_mapping_dto import (  # noqa: E501
+    ApiRoleMemberMappingDTO,
+)
 from nexus_iq_sdk.rest import ApiException
 
 
@@ -35,5 +37,5 @@ class TestApiRoleMemberMappingDTO(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

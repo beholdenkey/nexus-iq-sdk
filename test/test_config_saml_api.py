@@ -29,23 +29,17 @@ class TestConfigSAMLApi(unittest.TestCase):
         pass
 
     def test_delete_saml_configuration(self):
-        """Test case for delete_saml_configuration
-
-        """
+        """Test case for delete_saml_configuration"""
         pass
 
     def test_get_metadata(self):
-        """Test case for get_metadata
-
-        """
+        """Test case for get_metadata"""
         pass
 
     def test_get_saml_configuration(self):
-        """Test case for get_saml_configuration
-
-        """
+        """Test case for get_saml_configuration"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

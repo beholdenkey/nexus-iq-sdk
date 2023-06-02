@@ -29,11 +29,9 @@ class TestTelemetryApi(unittest.TestCase):
         pass
 
     def test_post_external_telemetry(self):
-        """Test case for post_external_telemetry
-
-        """
+        """Test case for post_external_telemetry"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

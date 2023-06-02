@@ -29,41 +29,29 @@ class TestPolicyViolationsApi(unittest.TestCase):
         pass
 
     def test_get_applicable_waivers(self):
-        """Test case for get_applicable_waivers
-
-        """
+        """Test case for get_applicable_waivers"""
         pass
 
     def test_get_cross_stage_policy_violation_by_constituent_id(self):
-        """Test case for get_cross_stage_policy_violation_by_constituent_id
-
-        """
+        """Test case for get_cross_stage_policy_violation_by_constituent_id"""
         pass
 
     def test_get_cross_stage_policy_violation_by_id(self):
-        """Test case for get_cross_stage_policy_violation_by_id
-
-        """
+        """Test case for get_cross_stage_policy_violation_by_id"""
         pass
 
     def test_get_policy_violations(self):
-        """Test case for get_policy_violations
-
-        """
+        """Test case for get_policy_violations"""
         pass
 
     def test_get_transitive_policy_violations_by_app_scan_component(self):
-        """Test case for get_transitive_policy_violations_by_app_scan_component
-
-        """
+        """Test case for get_transitive_policy_violations_by_app_scan_component"""
         pass
 
     def test_get_transitive_policy_violations_by_owner_stage_component(self):
-        """Test case for get_transitive_policy_violations_by_owner_stage_component
-
-        """
+        """Test case for get_transitive_policy_violations_by_owner_stage_component"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

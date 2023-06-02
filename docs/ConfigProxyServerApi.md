@@ -1,19 +1,19 @@
 # swagger_client.ConfigProxyServerApi
 
-All URIs are relative to */*
+All URIs are relative to _/_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**delete_configuration3**](ConfigProxyServerApi.md#delete_configuration3) | **DELETE** /api/v2/config/httpProxyServer | 
-[**get_configuration3**](ConfigProxyServerApi.md#get_configuration3) | **GET** /api/v2/config/httpProxyServer | 
-[**set_configuration3**](ConfigProxyServerApi.md#set_configuration3) | **PUT** /api/v2/config/httpProxyServer | 
+| Method                                                                     | HTTP request                              | Description |
+| -------------------------------------------------------------------------- | ----------------------------------------- | ----------- |
+| [**delete_configuration3**](ConfigProxyServerApi.md#delete_configuration3) | **DELETE** /api/v2/config/httpProxyServer |
+| [**get_configuration3**](ConfigProxyServerApi.md#get_configuration3)       | **GET** /api/v2/config/httpProxyServer    |
+| [**set_configuration3**](ConfigProxyServerApi.md#set_configuration3)       | **PUT** /api/v2/config/httpProxyServer    |
 
 # **delete_configuration3**
+
 > delete_configuration3()
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -31,6 +31,7 @@ except ApiException as e:
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -43,17 +44,17 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: _/_
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_configuration3**
+
 > ApiProxyServerConfigurationDTO get_configuration3()
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -72,6 +73,7 @@ except ApiException as e:
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -84,17 +86,17 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **set_configuration3**
+
 > set_configuration3(body=body)
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -114,9 +116,9 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**ApiProxyServerConfigurationDTO**](ApiProxyServerConfigurationDTO.md)|  | [optional] 
+| Name     | Type                                                                    | Description | Notes      |
+| -------- | ----------------------------------------------------------------------- | ----------- | ---------- |
+| **body** | [**ApiProxyServerConfigurationDTO**](ApiProxyServerConfigurationDTO.md) |             | [optional] |
 
 ### Return type
 
@@ -128,8 +130,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: */*
+- **Content-Type**: application/json
+- **Accept**: _/_
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

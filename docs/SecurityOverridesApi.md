@@ -1,17 +1,17 @@
 # swagger_client.SecurityOverridesApi
 
-All URIs are relative to */*
+All URIs are relative to _/_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**get_security_vulnerability_overrides**](SecurityOverridesApi.md#get_security_vulnerability_overrides) | **GET** /api/v2/securityOverrides | 
+| Method                                                                                                   | HTTP request                      | Description |
+| -------------------------------------------------------------------------------------------------------- | --------------------------------- | ----------- |
+| [**get_security_vulnerability_overrides**](SecurityOverridesApi.md#get_security_vulnerability_overrides) | **GET** /api/v2/securityOverrides |
 
 # **get_security_vulnerability_overrides**
+
 > ApiSecurityVulnerabilityOverrideResponseDTOV2 get_security_vulnerability_overrides(ref_id=ref_id, component_purl=component_purl, owner_id=owner_id)
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -34,11 +34,11 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ref_id** | **str**|  | [optional] 
- **component_purl** | **str**|  | [optional] 
- **owner_id** | **str**|  | [optional] 
+| Name               | Type    | Description | Notes      |
+| ------------------ | ------- | ----------- | ---------- |
+| **ref_id**         | **str** |             | [optional] |
+| **component_purl** | **str** |             | [optional] |
+| **owner_id**       | **str** |             | [optional] |
 
 ### Return type
 
@@ -50,8 +50,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

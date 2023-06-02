@@ -1,22 +1,22 @@
 # swagger_client.EvaluationApi
 
-All URIs are relative to */*
+All URIs are relative to _/_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**deprecated_manifest_evaluation**](EvaluationApi.md#deprecated_manifest_evaluation) | **POST** /api/v2/evaluation/applications/{applicationId}/manifestEvaluation | 
-[**evaluate_components**](EvaluationApi.md#evaluate_components) | **POST** /api/v2/evaluation/applications/{applicationId} | 
-[**evaluate_source_control**](EvaluationApi.md#evaluate_source_control) | **POST** /api/v2/evaluation/applications/{applicationId}/sourceControlEvaluation | 
-[**get_application_evaluation_status**](EvaluationApi.md#get_application_evaluation_status) | **GET** /api/v2/evaluation/applications/{applicationId}/status/{statusId} | 
-[**get_component_evaluation**](EvaluationApi.md#get_component_evaluation) | **GET** /api/v2/evaluation/applications/{applicationId}/results/{resultId} | 
-[**promote_scan**](EvaluationApi.md#promote_scan) | **POST** /api/v2/evaluation/applications/{applicationId}/promoteScan | 
+| Method                                                                                      | HTTP request                                                                     | Description |
+| ------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | ----------- |
+| [**deprecated_manifest_evaluation**](EvaluationApi.md#deprecated_manifest_evaluation)       | **POST** /api/v2/evaluation/applications/{applicationId}/manifestEvaluation      |
+| [**evaluate_components**](EvaluationApi.md#evaluate_components)                             | **POST** /api/v2/evaluation/applications/{applicationId}                         |
+| [**evaluate_source_control**](EvaluationApi.md#evaluate_source_control)                     | **POST** /api/v2/evaluation/applications/{applicationId}/sourceControlEvaluation |
+| [**get_application_evaluation_status**](EvaluationApi.md#get_application_evaluation_status) | **GET** /api/v2/evaluation/applications/{applicationId}/status/{statusId}        |
+| [**get_component_evaluation**](EvaluationApi.md#get_component_evaluation)                   | **GET** /api/v2/evaluation/applications/{applicationId}/results/{resultId}       |
+| [**promote_scan**](EvaluationApi.md#promote_scan)                                           | **POST** /api/v2/evaluation/applications/{applicationId}/promoteScan             |
 
 # **deprecated_manifest_evaluation**
+
 > ApiApplicationEvaluationStatusDTOV2 deprecated_manifest_evaluation(application_id, body=body)
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -26,7 +26,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.EvaluationApi()
-application_id = 'application_id_example' # str | 
+application_id = 'application_id_example' # str |
 body = swagger_client.ApiSourceControlEvaluationRequestDTO() # ApiSourceControlEvaluationRequestDTO |  (optional)
 
 try:
@@ -38,10 +38,10 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **application_id** | **str**|  | 
- **body** | [**ApiSourceControlEvaluationRequestDTO**](ApiSourceControlEvaluationRequestDTO.md)|  | [optional] 
+| Name               | Type                                                                                | Description | Notes      |
+| ------------------ | ----------------------------------------------------------------------------------- | ----------- | ---------- |
+| **application_id** | **str**                                                                             |             |
+| **body**           | [**ApiSourceControlEvaluationRequestDTO**](ApiSourceControlEvaluationRequestDTO.md) |             | [optional] |
 
 ### Return type
 
@@ -53,17 +53,17 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **evaluate_components**
+
 > ApiComponentEvaluationTicketDTOV2 evaluate_components(application_id, body=body)
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -73,7 +73,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.EvaluationApi()
-application_id = 'application_id_example' # str | 
+application_id = 'application_id_example' # str |
 body = swagger_client.ApiComponentEvaluationRequestDTOV2() # ApiComponentEvaluationRequestDTOV2 |  (optional)
 
 try:
@@ -85,10 +85,10 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **application_id** | **str**|  | 
- **body** | [**ApiComponentEvaluationRequestDTOV2**](ApiComponentEvaluationRequestDTOV2.md)|  | [optional] 
+| Name               | Type                                                                            | Description | Notes      |
+| ------------------ | ------------------------------------------------------------------------------- | ----------- | ---------- |
+| **application_id** | **str**                                                                         |             |
+| **body**           | [**ApiComponentEvaluationRequestDTOV2**](ApiComponentEvaluationRequestDTOV2.md) |             | [optional] |
 
 ### Return type
 
@@ -100,17 +100,17 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **evaluate_source_control**
+
 > ApiApplicationEvaluationStatusDTOV2 evaluate_source_control(application_id, body=body)
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -120,7 +120,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.EvaluationApi()
-application_id = 'application_id_example' # str | 
+application_id = 'application_id_example' # str |
 body = swagger_client.ApiSourceControlEvaluationRequestDTO() # ApiSourceControlEvaluationRequestDTO |  (optional)
 
 try:
@@ -132,10 +132,10 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **application_id** | **str**|  | 
- **body** | [**ApiSourceControlEvaluationRequestDTO**](ApiSourceControlEvaluationRequestDTO.md)|  | [optional] 
+| Name               | Type                                                                                | Description | Notes      |
+| ------------------ | ----------------------------------------------------------------------------------- | ----------- | ---------- |
+| **application_id** | **str**                                                                             |             |
+| **body**           | [**ApiSourceControlEvaluationRequestDTO**](ApiSourceControlEvaluationRequestDTO.md) |             | [optional] |
 
 ### Return type
 
@@ -147,17 +147,17 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_application_evaluation_status**
+
 > ApiApplicationEvaluationResultDTOV2 get_application_evaluation_status(application_id, status_id)
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -167,8 +167,8 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.EvaluationApi()
-application_id = 'application_id_example' # str | 
-status_id = 'status_id_example' # str | 
+application_id = 'application_id_example' # str |
+status_id = 'status_id_example' # str |
 
 try:
     api_response = api_instance.get_application_evaluation_status(application_id, status_id)
@@ -179,10 +179,10 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **application_id** | **str**|  | 
- **status_id** | **str**|  | 
+| Name               | Type    | Description | Notes |
+| ------------------ | ------- | ----------- | ----- |
+| **application_id** | **str** |             |
+| **status_id**      | **str** |             |
 
 ### Return type
 
@@ -194,17 +194,17 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_component_evaluation**
+
 > ApiComponentEvaluationResultDTOV2 get_component_evaluation(application_id, result_id)
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -214,8 +214,8 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.EvaluationApi()
-application_id = 'application_id_example' # str | 
-result_id = 'result_id_example' # str | 
+application_id = 'application_id_example' # str |
+result_id = 'result_id_example' # str |
 
 try:
     api_response = api_instance.get_component_evaluation(application_id, result_id)
@@ -226,10 +226,10 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **application_id** | **str**|  | 
- **result_id** | **str**|  | 
+| Name               | Type    | Description | Notes |
+| ------------------ | ------- | ----------- | ----- |
+| **application_id** | **str** |             |
+| **result_id**      | **str** |             |
 
 ### Return type
 
@@ -241,17 +241,17 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **promote_scan**
+
 > ApiApplicationEvaluationStatusDTOV2 promote_scan(application_id, body=body)
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -261,7 +261,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.EvaluationApi()
-application_id = 'application_id_example' # str | 
+application_id = 'application_id_example' # str |
 body = swagger_client.ApiPromoteScanRequestDTOV2() # ApiPromoteScanRequestDTOV2 |  (optional)
 
 try:
@@ -273,10 +273,10 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **application_id** | **str**|  | 
- **body** | [**ApiPromoteScanRequestDTOV2**](ApiPromoteScanRequestDTOV2.md)|  | [optional] 
+| Name               | Type                                                            | Description | Notes      |
+| ------------------ | --------------------------------------------------------------- | ----------- | ---------- |
+| **application_id** | **str**                                                         |             |
+| **body**           | [**ApiPromoteScanRequestDTOV2**](ApiPromoteScanRequestDTOV2.md) |             | [optional] |
 
 ### Return type
 
@@ -288,8 +288,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

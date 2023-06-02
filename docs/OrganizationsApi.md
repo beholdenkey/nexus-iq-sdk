@@ -1,19 +1,19 @@
 # swagger_client.OrganizationsApi
 
-All URIs are relative to */*
+All URIs are relative to _/_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**add_organization**](OrganizationsApi.md#add_organization) | **POST** /api/v2/organizations | 
-[**get_organization**](OrganizationsApi.md#get_organization) | **GET** /api/v2/organizations/{organizationId} | 
-[**get_organizations**](OrganizationsApi.md#get_organizations) | **GET** /api/v2/organizations | 
+| Method                                                         | HTTP request                                   | Description |
+| -------------------------------------------------------------- | ---------------------------------------------- | ----------- |
+| [**add_organization**](OrganizationsApi.md#add_organization)   | **POST** /api/v2/organizations                 |
+| [**get_organization**](OrganizationsApi.md#get_organization)   | **GET** /api/v2/organizations/{organizationId} |
+| [**get_organizations**](OrganizationsApi.md#get_organizations) | **GET** /api/v2/organizations                  |
 
 # **add_organization**
+
 > ApiOrganizationDTO add_organization(body=body)
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -34,9 +34,9 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**ApiOrganizationDTO**](ApiOrganizationDTO.md)|  | [optional] 
+| Name     | Type                                            | Description | Notes      |
+| -------- | ----------------------------------------------- | ----------- | ---------- |
+| **body** | [**ApiOrganizationDTO**](ApiOrganizationDTO.md) |             | [optional] |
 
 ### Return type
 
@@ -48,17 +48,17 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_organization**
+
 > ApiOrganizationDTO get_organization(organization_id)
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -68,7 +68,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.OrganizationsApi()
-organization_id = 'organization_id_example' # str | 
+organization_id = 'organization_id_example' # str |
 
 try:
     api_response = api_instance.get_organization(organization_id)
@@ -79,9 +79,9 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organization_id** | **str**|  | 
+| Name                | Type    | Description | Notes |
+| ------------------- | ------- | ----------- | ----- |
+| **organization_id** | **str** |             |
 
 ### Return type
 
@@ -93,17 +93,17 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_organizations**
+
 > ApiOrganizationListDTO get_organizations(organization_name=organization_name)
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -124,9 +124,9 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organization_name** | [**list[str]**](str.md)|  | [optional] 
+| Name                  | Type                    | Description | Notes      |
+| --------------------- | ----------------------- | ----------- | ---------- |
+| **organization_name** | [**list[str]**](str.md) |             | [optional] |
 
 ### Return type
 
@@ -138,8 +138,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

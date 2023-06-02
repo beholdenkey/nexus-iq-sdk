@@ -29,41 +29,29 @@ class TestEvaluationApi(unittest.TestCase):
         pass
 
     def test_deprecated_manifest_evaluation(self):
-        """Test case for deprecated_manifest_evaluation
-
-        """
+        """Test case for deprecated_manifest_evaluation"""
         pass
 
     def test_evaluate_components(self):
-        """Test case for evaluate_components
-
-        """
+        """Test case for evaluate_components"""
         pass
 
     def test_evaluate_source_control(self):
-        """Test case for evaluate_source_control
-
-        """
+        """Test case for evaluate_source_control"""
         pass
 
     def test_get_application_evaluation_status(self):
-        """Test case for get_application_evaluation_status
-
-        """
+        """Test case for get_application_evaluation_status"""
         pass
 
     def test_get_component_evaluation(self):
-        """Test case for get_component_evaluation
-
-        """
+        """Test case for get_component_evaluation"""
         pass
 
     def test_promote_scan(self):
-        """Test case for promote_scan
-
-        """
+        """Test case for promote_scan"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -1,17 +1,17 @@
 # swagger_client.TelemetryApi
 
-All URIs are relative to */*
+All URIs are relative to _/_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**post_external_telemetry**](TelemetryApi.md#post_external_telemetry) | **POST** /api/v2/telemetry | 
+| Method                                                                 | HTTP request               | Description |
+| ---------------------------------------------------------------------- | -------------------------- | ----------- |
+| [**post_external_telemetry**](TelemetryApi.md#post_external_telemetry) | **POST** /api/v2/telemetry |
 
 # **post_external_telemetry**
+
 > post_external_telemetry(body=body, user_agent=user_agent)
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -32,10 +32,10 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**dict(str, str)**](dict.md)|  | [optional] 
- **user_agent** | **str**|  | [optional] 
+| Name           | Type                          | Description | Notes      |
+| -------------- | ----------------------------- | ----------- | ---------- |
+| **body**       | [**dict(str, str)**](dict.md) |             | [optional] |
+| **user_agent** | **str**                       |             | [optional] |
 
 ### Return type
 
@@ -47,8 +47,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: */*
+- **Content-Type**: application/json
+- **Accept**: _/_
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

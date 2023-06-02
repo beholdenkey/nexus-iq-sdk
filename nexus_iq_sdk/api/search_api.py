@@ -45,11 +45,13 @@ class SearchApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.create_search_index_async_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.create_search_index_async_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.create_search_index_async_with_http_info(
+                **kwargs
+            )  # noqa: E501
             return data
 
     def create_search_index_async_with_http_info(self, **kwargs):  # noqa: E501
@@ -67,20 +69,20 @@ class SearchApi(object):
         """
 
         all_params = []  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_search_index_async" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
@@ -95,14 +97,16 @@ class SearchApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['*/*'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["*/*"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/v2/search/advanced/index', 'POST',
+            "/api/v2/search/advanced/index",
+            "POST",
             path_params,
             query_params,
             header_params,
@@ -111,11 +115,12 @@ class SearchApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def get_export_results(self, **kwargs):  # noqa: E501
         """get_export_results  # noqa: E501
@@ -132,8 +137,8 @@ class SearchApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.get_export_results_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_export_results_with_http_info(**kwargs)  # noqa: E501
@@ -155,31 +160,33 @@ class SearchApi(object):
                  returns the request thread.
         """
 
-        all_params = ['query', 'all_components']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["query", "all_components"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_export_results" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
         path_params = {}
 
         query_params = []
-        if 'query' in params:
-            query_params.append(('query', params['query']))  # noqa: E501
-        if 'all_components' in params:
-            query_params.append(('allComponents', params['all_components']))  # noqa: E501
+        if "query" in params:
+            query_params.append(("query", params["query"]))  # noqa: E501
+        if "all_components" in params:
+            query_params.append(
+                ("allComponents", params["all_components"])
+            )  # noqa: E501
 
         header_params = {}
 
@@ -188,14 +195,16 @@ class SearchApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/csv'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/csv"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/v2/search/advanced/export/csv', 'GET',
+            "/api/v2/search/advanced/export/csv",
+            "GET",
             path_params,
             query_params,
             header_params,
@@ -204,11 +213,12 @@ class SearchApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def search_component(self, **kwargs):  # noqa: E501
         """search_component  # noqa: E501
@@ -227,8 +237,8 @@ class SearchApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.search_component_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.search_component_with_http_info(**kwargs)  # noqa: E501
@@ -252,35 +262,42 @@ class SearchApi(object):
                  returns the request thread.
         """
 
-        all_params = ['stage_id', 'hash', 'component_identifier', 'package_url']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = [
+            "stage_id",
+            "hash",
+            "component_identifier",
+            "package_url",
+        ]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method search_component" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
         path_params = {}
 
         query_params = []
-        if 'stage_id' in params:
-            query_params.append(('stageId', params['stage_id']))  # noqa: E501
-        if 'hash' in params:
-            query_params.append(('hash', params['hash']))  # noqa: E501
-        if 'component_identifier' in params:
-            query_params.append(('componentIdentifier', params['component_identifier']))  # noqa: E501
-        if 'package_url' in params:
-            query_params.append(('packageUrl', params['package_url']))  # noqa: E501
+        if "stage_id" in params:
+            query_params.append(("stageId", params["stage_id"]))  # noqa: E501
+        if "hash" in params:
+            query_params.append(("hash", params["hash"]))  # noqa: E501
+        if "component_identifier" in params:
+            query_params.append(
+                ("componentIdentifier", params["component_identifier"])
+            )  # noqa: E501
+        if "package_url" in params:
+            query_params.append(("packageUrl", params["package_url"]))  # noqa: E501
 
         header_params = {}
 
@@ -289,27 +306,30 @@ class SearchApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/v2/search/component', 'GET',
+            "/api/v2/search/component",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='ApiSearchResultsDTOV2',  # noqa: E501
+            response_type="ApiSearchResultsDTOV2",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )
 
     def search_index(self, **kwargs):  # noqa: E501
         """search_index  # noqa: E501
@@ -328,8 +348,8 @@ class SearchApi(object):
                  If the method is called asynchronously,
                  returns the request thread.
         """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
+        kwargs["_return_http_data_only"] = True
+        if kwargs.get("async_req"):
             return self.search_index_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.search_index_with_http_info(**kwargs)  # noqa: E501
@@ -353,35 +373,37 @@ class SearchApi(object):
                  returns the request thread.
         """
 
-        all_params = ['query', 'page_size', 'page', 'all_components']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
+        all_params = ["query", "page_size", "page", "all_components"]  # noqa: E501
+        all_params.append("async_req")
+        all_params.append("_return_http_data_only")
+        all_params.append("_preload_content")
+        all_params.append("_request_timeout")
 
         params = locals()
-        for key, val in six.iteritems(params['kwargs']):
+        for key, val in six.iteritems(params["kwargs"]):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method search_index" % key
                 )
             params[key] = val
-        del params['kwargs']
+        del params["kwargs"]
 
         collection_formats = {}
 
         path_params = {}
 
         query_params = []
-        if 'query' in params:
-            query_params.append(('query', params['query']))  # noqa: E501
-        if 'page_size' in params:
-            query_params.append(('pageSize', params['page_size']))  # noqa: E501
-        if 'page' in params:
-            query_params.append(('page', params['page']))  # noqa: E501
-        if 'all_components' in params:
-            query_params.append(('allComponents', params['all_components']))  # noqa: E501
+        if "query" in params:
+            query_params.append(("query", params["query"]))  # noqa: E501
+        if "page_size" in params:
+            query_params.append(("pageSize", params["page_size"]))  # noqa: E501
+        if "page" in params:
+            query_params.append(("page", params["page"]))  # noqa: E501
+        if "all_components" in params:
+            query_params.append(
+                ("allComponents", params["all_components"])
+            )  # noqa: E501
 
         header_params = {}
 
@@ -390,24 +412,27 @@ class SearchApi(object):
 
         body_params = None
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+        header_params["Accept"] = self.api_client.select_header_accept(
+            ["application/json"]
+        )  # noqa: E501
 
         # Authentication setting
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/v2/search/advanced', 'GET',
+            "/api/v2/search/advanced",
+            "GET",
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='SearchResultDTO',  # noqa: E501
+            response_type="SearchResultDTO",  # noqa: E501
             auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
+            async_req=params.get("async_req"),
+            _return_http_data_only=params.get("_return_http_data_only"),
+            _preload_content=params.get("_preload_content", True),
+            _request_timeout=params.get("_request_timeout"),
+            collection_formats=collection_formats,
+        )

@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import nexus_iq_sdk
-from nexus_iq_sdk.models.api_report_constraint_condition_dtov2 import ApiReportConstraintConditionDTOV2  # noqa: E501
+from nexus_iq_sdk.models.api_report_constraint_condition_dtov2 import (  # noqa: E501
+    ApiReportConstraintConditionDTOV2,
+)
 from nexus_iq_sdk.rest import ApiException
 
 
@@ -35,5 +37,5 @@ class TestApiReportConstraintConditionDTOV2(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

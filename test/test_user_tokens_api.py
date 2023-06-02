@@ -29,47 +29,33 @@ class TestUserTokensApi(unittest.TestCase):
         pass
 
     def test_create_user_token(self):
-        """Test case for create_user_token
-
-        """
+        """Test case for create_user_token"""
         pass
 
     def test_delete_current_user_token(self):
-        """Test case for delete_current_user_token
-
-        """
+        """Test case for delete_current_user_token"""
         pass
 
     def test_delete_user_token_by_user_code(self):
-        """Test case for delete_user_token_by_user_code
-
-        """
+        """Test case for delete_user_token_by_user_code"""
         pass
 
     def test_get_user_token_by_username_and_realm_id(self):
-        """Test case for get_user_token_by_username_and_realm_id
-
-        """
+        """Test case for get_user_token_by_username_and_realm_id"""
         pass
 
     def test_get_user_token_exists_for_current_user(self):
-        """Test case for get_user_token_exists_for_current_user
-
-        """
+        """Test case for get_user_token_exists_for_current_user"""
         pass
 
     def test_get_user_tokens_by_created_between_and_realm_id(self):
-        """Test case for get_user_tokens_by_created_between_and_realm_id
-
-        """
+        """Test case for get_user_tokens_by_created_between_and_realm_id"""
         pass
 
     def test_purge_user_tokens(self):
-        """Test case for purge_user_tokens
-
-        """
+        """Test case for purge_user_tokens"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

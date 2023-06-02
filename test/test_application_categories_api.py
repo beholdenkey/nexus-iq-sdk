@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import nexus_iq_sdk
-from nexus_iq_sdk.api.application_categories_api import ApplicationCategoriesApi  # noqa: E501
+from nexus_iq_sdk.api.application_categories_api import (  # noqa: E501
+    ApplicationCategoriesApi,
+)
 from nexus_iq_sdk.rest import ApiException
 
 
@@ -29,65 +31,45 @@ class TestApplicationCategoriesApi(unittest.TestCase):
         pass
 
     def test_add_tag(self):
-        """Test case for add_tag
-
-        """
+        """Test case for add_tag"""
         pass
 
     def test_delete_tag(self):
-        """Test case for delete_tag
-
-        """
+        """Test case for delete_tag"""
         pass
 
     def test_get_applicable_tags(self):
-        """Test case for get_applicable_tags
-
-        """
+        """Test case for get_applicable_tags"""
         pass
 
     def test_get_applicable_tags_by_application_public_id(self):
-        """Test case for get_applicable_tags_by_application_public_id
-
-        """
+        """Test case for get_applicable_tags_by_application_public_id"""
         pass
 
     def test_get_application_applicable_tags(self):
-        """Test case for get_application_applicable_tags
-
-        """
+        """Test case for get_application_applicable_tags"""
         pass
 
     def test_get_applied_policy_tags(self):
-        """Test case for get_applied_policy_tags
-
-        """
+        """Test case for get_applied_policy_tags"""
         pass
 
     def test_get_applied_tags(self):
-        """Test case for get_applied_tags
-
-        """
+        """Test case for get_applied_tags"""
         pass
 
     def test_get_tags(self):
-        """Test case for get_tags
-
-        """
+        """Test case for get_tags"""
         pass
 
     def test_get_tags_used_by_applications(self):
-        """Test case for get_tags_used_by_applications
-
-        """
+        """Test case for get_tags_used_by_applications"""
         pass
 
     def test_update_tag(self):
-        """Test case for update_tag
-
-        """
+        """Test case for update_tag"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

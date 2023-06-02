@@ -1,20 +1,20 @@
 # swagger_client.ClaimApi
 
-All URIs are relative to */*
+All URIs are relative to _/_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**delete**](ClaimApi.md#delete) | **DELETE** /api/v2/claim/components/{hash} | 
-[**get**](ClaimApi.md#get) | **GET** /api/v2/claim/components/{hash} | 
-[**get_all**](ClaimApi.md#get_all) | **GET** /api/v2/claim/components | 
-[**set**](ClaimApi.md#set) | **POST** /api/v2/claim/components | 
+| Method                             | HTTP request                               | Description |
+| ---------------------------------- | ------------------------------------------ | ----------- |
+| [**delete**](ClaimApi.md#delete)   | **DELETE** /api/v2/claim/components/{hash} |
+| [**get**](ClaimApi.md#get)         | **GET** /api/v2/claim/components/{hash}    |
+| [**get_all**](ClaimApi.md#get_all) | **GET** /api/v2/claim/components           |
+| [**set**](ClaimApi.md#set)         | **POST** /api/v2/claim/components          |
 
 # **delete**
+
 > delete(hash)
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -24,7 +24,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.ClaimApi()
-hash = 'hash_example' # str | 
+hash = 'hash_example' # str |
 
 try:
     api_instance.delete(hash)
@@ -34,9 +34,9 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **hash** | **str**|  | 
+| Name     | Type    | Description | Notes |
+| -------- | ------- | ----------- | ----- |
+| **hash** | **str** |             |
 
 ### Return type
 
@@ -48,17 +48,17 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: */*
+- **Content-Type**: Not defined
+- **Accept**: _/_
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get**
+
 > ApiHashComponentIdentifierDTO get(hash)
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -68,7 +68,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.ClaimApi()
-hash = 'hash_example' # str | 
+hash = 'hash_example' # str |
 
 try:
     api_response = api_instance.get(hash)
@@ -79,9 +79,9 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **hash** | **str**|  | 
+| Name     | Type    | Description | Notes |
+| -------- | ------- | ----------- | ----- |
+| **hash** | **str** |             |
 
 ### Return type
 
@@ -93,17 +93,17 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_all**
+
 > ApiHashComponentIdentifiersDTO get_all()
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -122,6 +122,7 @@ except ApiException as e:
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -134,17 +135,17 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **set**
+
 > ApiHashComponentIdentifierDTO set(body=body)
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -165,9 +166,9 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**ApiHashComponentIdentifierDTO**](ApiHashComponentIdentifierDTO.md)|  | [optional] 
+| Name     | Type                                                                  | Description | Notes      |
+| -------- | --------------------------------------------------------------------- | ----------- | ---------- |
+| **body** | [**ApiHashComponentIdentifierDTO**](ApiHashComponentIdentifierDTO.md) |             | [optional] |
 
 ### Return type
 
@@ -179,8 +180,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

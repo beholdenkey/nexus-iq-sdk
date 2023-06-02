@@ -1,9 +1,9 @@
 # ApiComponentDetailsResultDTOV2
 
 ## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**component_details** | [**list[ApiComponentDetailsDTOV2]**](ApiComponentDetailsDTOV2.md) |  | [optional] 
+
+| Name                  | Type                                                              | Description | Notes      |
+| --------------------- | ----------------------------------------------------------------- | ----------- | ---------- |
+| **component_details** | [**list[ApiComponentDetailsDTOV2]**](ApiComponentDetailsDTOV2.md) |             | [optional] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-

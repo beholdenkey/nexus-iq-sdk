@@ -29,11 +29,9 @@ class TestPoliciesApi(unittest.TestCase):
         pass
 
     def test_get_policies(self):
-        """Test case for get_policies
-
-        """
+        """Test case for get_policies"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

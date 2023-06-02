@@ -29,35 +29,25 @@ class TestUsersApi(unittest.TestCase):
         pass
 
     def test_add(self):
-        """Test case for add
-
-        """
+        """Test case for add"""
         pass
 
     def test_delete1(self):
-        """Test case for delete1
-
-        """
+        """Test case for delete1"""
         pass
 
     def test_get1(self):
-        """Test case for get1
-
-        """
+        """Test case for get1"""
         pass
 
     def test_get_all2(self):
-        """Test case for get_all2
-
-        """
+        """Test case for get_all2"""
         pass
 
     def test_update(self):
-        """Test case for update
-
-        """
+        """Test case for update"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

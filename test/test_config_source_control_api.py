@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import nexus_iq_sdk
-from nexus_iq_sdk.api.config_source_control_api import ConfigSourceControlApi  # noqa: E501
+from nexus_iq_sdk.api.config_source_control_api import (  # noqa: E501
+    ConfigSourceControlApi,
+)
 from nexus_iq_sdk.rest import ApiException
 
 
@@ -29,23 +31,17 @@ class TestConfigSourceControlApi(unittest.TestCase):
         pass
 
     def test_delete_configuration5(self):
-        """Test case for delete_configuration5
-
-        """
+        """Test case for delete_configuration5"""
         pass
 
     def test_get_configuration5(self):
-        """Test case for get_configuration5
-
-        """
+        """Test case for get_configuration5"""
         pass
 
     def test_set_configuration5(self):
-        """Test case for set_configuration5
-
-        """
+        """Test case for set_configuration5"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -29,29 +29,21 @@ class TestConfigMailApi(unittest.TestCase):
         pass
 
     def test_delete_configuration2(self):
-        """Test case for delete_configuration2
-
-        """
+        """Test case for delete_configuration2"""
         pass
 
     def test_get_configuration2(self):
-        """Test case for get_configuration2
-
-        """
+        """Test case for get_configuration2"""
         pass
 
     def test_set_configuration2(self):
-        """Test case for set_configuration2
-
-        """
+        """Test case for set_configuration2"""
         pass
 
     def test_test_configuration(self):
-        """Test case for test_configuration
-
-        """
+        """Test case for test_configuration"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

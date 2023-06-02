@@ -29,23 +29,17 @@ class TestConfigJIRAApi(unittest.TestCase):
         pass
 
     def test_delete_configuration1(self):
-        """Test case for delete_configuration1
-
-        """
+        """Test case for delete_configuration1"""
         pass
 
     def test_get_configuration1(self):
-        """Test case for get_configuration1
-
-        """
+        """Test case for get_configuration1"""
         pass
 
     def test_set_configuration1(self):
-        """Test case for set_configuration1
-
-        """
+        """Test case for set_configuration1"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

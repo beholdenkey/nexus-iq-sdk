@@ -29,11 +29,9 @@ class TestVulnerabilitiesApi(unittest.TestCase):
         pass
 
     def test_get_security_vulnerability_details(self):
-        """Test case for get_security_vulnerability_details
-
-        """
+        """Test case for get_security_vulnerability_details"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

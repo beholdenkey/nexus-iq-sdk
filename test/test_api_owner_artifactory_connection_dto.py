@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import nexus_iq_sdk
-from nexus_iq_sdk.models.api_owner_artifactory_connection_dto import ApiOwnerArtifactoryConnectionDTO  # noqa: E501
+from nexus_iq_sdk.models.api_owner_artifactory_connection_dto import (  # noqa: E501
+    ApiOwnerArtifactoryConnectionDTO,
+)
 from nexus_iq_sdk.rest import ApiException
 
 
@@ -35,5 +37,5 @@ class TestApiOwnerArtifactoryConnectionDTO(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

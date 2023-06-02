@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import nexus_iq_sdk
-from nexus_iq_sdk.models.component_display_name_part import ComponentDisplayNamePart  # noqa: E501
+from nexus_iq_sdk.models.component_display_name_part import (  # noqa: E501
+    ComponentDisplayNamePart,
+)
 from nexus_iq_sdk.rest import ApiException
 
 
@@ -35,5 +37,5 @@ class TestComponentDisplayNamePart(unittest.TestCase):
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import nexus_iq_sdk
-from nexus_iq_sdk.api.composite_source_control_config_validator_api import CompositeSourceControlConfigValidatorApi  # noqa: E501
+from nexus_iq_sdk.api.composite_source_control_config_validator_api import (  # noqa: E501
+    CompositeSourceControlConfigValidatorApi,
+)
 from nexus_iq_sdk.rest import ApiException
 
 
@@ -29,11 +31,9 @@ class TestCompositeSourceControlConfigValidatorApi(unittest.TestCase):
         pass
 
     def test_validate_source_control_config(self):
-        """Test case for validate_source_control_config
-
-        """
+        """Test case for validate_source_control_config"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -29,29 +29,21 @@ class TestSearchApi(unittest.TestCase):
         pass
 
     def test_create_search_index_async(self):
-        """Test case for create_search_index_async
-
-        """
+        """Test case for create_search_index_async"""
         pass
 
     def test_get_export_results(self):
-        """Test case for get_export_results
-
-        """
+        """Test case for get_export_results"""
         pass
 
     def test_search_component(self):
-        """Test case for search_component
-
-        """
+        """Test case for search_component"""
         pass
 
     def test_search_index(self):
-        """Test case for search_index
-
-        """
+        """Test case for search_index"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -1,18 +1,18 @@
 # swagger_client.DataRetentionPoliciesApi
 
-All URIs are relative to */*
+All URIs are relative to _/_
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**get_data_retention_policies**](DataRetentionPoliciesApi.md#get_data_retention_policies) | **GET** /api/v2/dataRetentionPolicies/organizations/{organizationId} | 
-[**set_data_retention_policies**](DataRetentionPoliciesApi.md#set_data_retention_policies) | **PUT** /api/v2/dataRetentionPolicies/organizations/{organizationId} | 
+| Method                                                                                     | HTTP request                                                         | Description |
+| ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------- | ----------- |
+| [**get_data_retention_policies**](DataRetentionPoliciesApi.md#get_data_retention_policies) | **GET** /api/v2/dataRetentionPolicies/organizations/{organizationId} |
+| [**set_data_retention_policies**](DataRetentionPoliciesApi.md#set_data_retention_policies) | **PUT** /api/v2/dataRetentionPolicies/organizations/{organizationId} |
 
 # **get_data_retention_policies**
+
 > ApiDataRetentionPoliciesDTO get_data_retention_policies(organization_id)
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -22,7 +22,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.DataRetentionPoliciesApi()
-organization_id = 'organization_id_example' # str | 
+organization_id = 'organization_id_example' # str |
 
 try:
     api_response = api_instance.get_data_retention_policies(organization_id)
@@ -33,9 +33,9 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organization_id** | **str**|  | 
+| Name                | Type    | Description | Notes |
+| ------------------- | ------- | ----------- | ----- |
+| **organization_id** | **str** |             |
 
 ### Return type
 
@@ -47,17 +47,17 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **set_data_retention_policies**
+
 > set_data_retention_policies(organization_id, body=body)
 
-
-
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -67,7 +67,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.DataRetentionPoliciesApi()
-organization_id = 'organization_id_example' # str | 
+organization_id = 'organization_id_example' # str |
 body = swagger_client.ApiDataRetentionPoliciesDTO() # ApiDataRetentionPoliciesDTO |  (optional)
 
 try:
@@ -78,10 +78,10 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organization_id** | **str**|  | 
- **body** | [**ApiDataRetentionPoliciesDTO**](ApiDataRetentionPoliciesDTO.md)|  | [optional] 
+| Name                | Type                                                              | Description | Notes      |
+| ------------------- | ----------------------------------------------------------------- | ----------- | ---------- |
+| **organization_id** | **str**                                                           |             |
+| **body**            | [**ApiDataRetentionPoliciesDTO**](ApiDataRetentionPoliciesDTO.md) |             | [optional] |
 
 ### Return type
 
@@ -93,8 +93,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: */*
+- **Content-Type**: application/json
+- **Accept**: _/_
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

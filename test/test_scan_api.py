@@ -29,17 +29,13 @@ class TestScanApi(unittest.TestCase):
         pass
 
     def test_get_scan_status(self):
-        """Test case for get_scan_status
-
-        """
+        """Test case for get_scan_status"""
         pass
 
     def test_scan_components(self):
-        """Test case for scan_components
-
-        """
+        """Test case for scan_components"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -15,7 +15,9 @@ from __future__ import absolute_import
 import unittest
 
 import nexus_iq_sdk
-from nexus_iq_sdk.api.license_legal_metadata_api import LicenseLegalMetadataApi  # noqa: E501
+from nexus_iq_sdk.api.license_legal_metadata_api import (  # noqa: E501
+    LicenseLegalMetadataApi,
+)
 from nexus_iq_sdk.rest import ApiException
 
 
@@ -29,83 +31,57 @@ class TestLicenseLegalMetadataApi(unittest.TestCase):
         pass
 
     def test_delete_attribution_report_template(self):
-        """Test case for delete_attribution_report_template
-
-        """
+        """Test case for delete_attribution_report_template"""
         pass
 
     def test_get_all_attribution_report_templates(self):
-        """Test case for get_all_attribution_report_templates
-
-        """
+        """Test case for get_all_attribution_report_templates"""
         pass
 
     def test_get_attribution_report_template_by_id(self):
-        """Test case for get_attribution_report_template_by_id
-
-        """
+        """Test case for get_attribution_report_template_by_id"""
         pass
 
     def test_get_license_legal_application_html_report(self):
-        """Test case for get_license_legal_application_html_report
-
-        """
+        """Test case for get_license_legal_application_html_report"""
         pass
 
     def test_get_license_legal_application_report(self):
-        """Test case for get_license_legal_application_report
-
-        """
+        """Test case for get_license_legal_application_report"""
         pass
 
     def test_get_license_legal_application_report1(self):
-        """Test case for get_license_legal_application_report1
-
-        """
+        """Test case for get_license_legal_application_report1"""
         pass
 
     def test_get_license_legal_component_report(self):
-        """Test case for get_license_legal_component_report
-
-        """
+        """Test case for get_license_legal_component_report"""
         pass
 
     def test_get_license_legal_custom_application_html_report(self):
-        """Test case for get_license_legal_custom_application_html_report
-
-        """
+        """Test case for get_license_legal_custom_application_html_report"""
         pass
 
     def test_get_license_legal_custom_application_html_report1(self):
-        """Test case for get_license_legal_custom_application_html_report1
-
-        """
+        """Test case for get_license_legal_custom_application_html_report1"""
         pass
 
     def test_get_license_legal_custom_multi_application_html_report1(self):
-        """Test case for get_license_legal_custom_multi_application_html_report1
-
-        """
+        """Test case for get_license_legal_custom_multi_application_html_report1"""
         pass
 
     def test_get_license_legal_multi_application_html_report(self):
-        """Test case for get_license_legal_multi_application_html_report
-
-        """
+        """Test case for get_license_legal_multi_application_html_report"""
         pass
 
     def test_get_license_legal_multi_application_report_from_active_user_filter(self):
-        """Test case for get_license_legal_multi_application_report_from_active_user_filter
-
-        """
+        """Test case for get_license_legal_multi_application_report_from_active_user_filter"""
         pass
 
     def test_save_attribution_report_template(self):
-        """Test case for save_attribution_report_template
-
-        """
+        """Test case for save_attribution_report_template"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

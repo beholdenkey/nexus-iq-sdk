@@ -29,35 +29,25 @@ class TestComponentsApi(unittest.TestCase):
         pass
 
     def test_delete_component_label(self):
-        """Test case for delete_component_label
-
-        """
+        """Test case for delete_component_label"""
         pass
 
     def test_get_component_details(self):
-        """Test case for get_component_details
-
-        """
+        """Test case for get_component_details"""
         pass
 
     def test_get_component_versions(self):
-        """Test case for get_component_versions
-
-        """
+        """Test case for get_component_versions"""
         pass
 
     def test_get_suggested_remediation_for_component(self):
-        """Test case for get_suggested_remediation_for_component
-
-        """
+        """Test case for get_suggested_remediation_for_component"""
         pass
 
     def test_set_component_label(self):
-        """Test case for set_component_label
-
-        """
+        """Test case for set_component_label"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -29,11 +29,9 @@ class TestPolicyWaiverApi(unittest.TestCase):
         pass
 
     def test_add_policy_waiver(self):
-        """Test case for add_policy_waiver
-
-        """
+        """Test case for add_policy_waiver"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

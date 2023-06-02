@@ -29,11 +29,9 @@ class TestEndpointsApi(unittest.TestCase):
         pass
 
     def test_get_open_api(self):
-        """Test case for get_open_api
-
-        """
+        """Test case for get_open_api"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

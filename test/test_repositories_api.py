@@ -29,17 +29,13 @@ class TestRepositoriesApi(unittest.TestCase):
         pass
 
     def test_get_quarantined_by_path(self):
-        """Test case for get_quarantined_by_path
-
-        """
+        """Test case for get_quarantined_by_path"""
         pass
 
     def test_release_quarantine_without_re_eval(self):
-        """Test case for release_quarantine_without_re_eval
-
-        """
+        """Test case for release_quarantine_without_re_eval"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -29,29 +29,21 @@ class TestConfigCrowdApi(unittest.TestCase):
         pass
 
     def test_delete_crowd_configuration(self):
-        """Test case for delete_crowd_configuration
-
-        """
+        """Test case for delete_crowd_configuration"""
         pass
 
     def test_get_crowd_configuration(self):
-        """Test case for get_crowd_configuration
-
-        """
+        """Test case for get_crowd_configuration"""
         pass
 
     def test_insert_or_update_crowd_configuration(self):
-        """Test case for insert_or_update_crowd_configuration
-
-        """
+        """Test case for insert_or_update_crowd_configuration"""
         pass
 
     def test_test_crowd_configuration(self):
-        """Test case for test_crowd_configuration
-
-        """
+        """Test case for test_crowd_configuration"""
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
