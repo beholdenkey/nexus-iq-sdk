@@ -1,5 +1,5 @@
 name: "CI - Pull Request"
-concurrency: # Cancel any existing runs of this workflow for this same PR
+concurrency:
   group: "${{ github.workflow }}-${{ github.ref }}"
   cancel-in-progress: true
 on:
