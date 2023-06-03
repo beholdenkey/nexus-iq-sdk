@@ -23,7 +23,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
 
       - name: "Testing: pytest and coverage"
-        run: "poetry invoke run pytest --cov=./ --cov-report xml"
+        run: "poetry run pytest --cov=./ --cov-report xml"
 
       - name: Create Coverage
         if: ${{ github.event_name == 'pull_request' }}
