@@ -22,14 +22,8 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      - name: "Linting: black"
-        run: "poetry run invoke black"
-
-      - name: "Linting: flake8"
-        run: "poetry run invoke flake8"
-
       - name: "Testing: pytest and coverage"
-        run: "poetry run pytest --cov=./ --cov-report xml"
+        run: "poetry invoke run pytest --cov=./ --cov-report xml"
 
       - name: Create Coverage
         if: ${{ github.event_name == 'pull_request' }}
