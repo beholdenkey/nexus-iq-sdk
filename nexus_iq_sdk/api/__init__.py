@@ -1,5 +1,3 @@
-from __future__ import absolute_import
-
 # import apis into api package
 from nexus_iq_sdk.api.application_categories_api import ApplicationCategoriesApi
 from nexus_iq_sdk.api.applications_api import ApplicationsApi
